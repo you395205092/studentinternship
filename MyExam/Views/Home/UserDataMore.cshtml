@@ -1,0 +1,71 @@
+﻿
+
+<div style="background:url(/Public/Home/Images/banner.jpg) top center  no-repeat ; height:400px;">
+</div>
+<div class="w1000">
+    <div class="pageleft">
+        <div class="leftbox1">
+            <div class="box1title">
+                会员中心
+            </div>
+        </div>
+        @Html.Partial("LeftUser")
+
+    </div>
+    <div class="pageright">
+        <dl class="righttitle">
+            <dt><b>在线答题</b></dt>
+            <dd>
+                您的位置：<a href="/Home/UserIndex">首页</a> &gt;
+                <a href="/Home/PaperList">在线答题</a>
+            </dd>
+        </dl>
+        <div class="content">
+            <div class="aboutus">
+
+               
+
+                <form onsubmit="return validate_form(this)" class="form form-horizontal" id="formAdd" action="/Home/UserDataMore" enctype="multipart/form-data" method="post">
+
+
+                        <ul>
+                            <li class="zhuce_form">
+                                <label>个人简介:</label>
+                                <input type="file" name="profile" id="Profile" />
+                            </li>
+                            <li class="zhuce_form">
+                                <label>护照:</label>
+                                <input type="file" name="passportPic" id="PassportPic" />
+                            </li>
+
+                            <li style="margin-top:20px;"><input type="submit" value="立即提交" class="submitBtn"></li>
+
+                        </ul>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<script>
+    function validate_form(obj) {
+        if ($("#Profile").val() == "") {
+            alert("个人简介不能为空");
+            return false;
+        }
+        if ($("#PassportPic").val() == "") {
+            alert("护照不能为空");
+            return false;
+        }
+        return true;
+    }
+</script>
+
+
+

@@ -1,0 +1,116 @@
+﻿@model SearchUserResult
+@{
+    ViewBag.Title = "学生列表";
+}
+<form id="formAdd">
+    <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 学生管理 <span class="c-gray en">&gt;</span> 学生列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+    <div class="page-container">
+        <div class="text-c">
+            <form action="/Admin/User/" method="post">
+
+                <input type="text" name="Keyword" id="Keyword" placeholder="姓名" style="width:250px" class="input-text">
+                <button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜索</button>
+            </form>
+        </div>
+
+        <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="batch_del()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a href="javascript:;" onclick=" layer_show('添加学生', '/Admin/User/Add' , '' , '550' )" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加学生</a></span>  <span class="r">共有数据：<strong>@Model.totalCount</strong> 条</span> </div>
+        <div class="mt-20">
+            <table class="table table-border table-bordered table-hover table-bg table-sort">
+                <thead>
+                    <tr class="text-c">
+                        <th width="25"><input type="checkbox" name="" value=""></th>
+                        <th width="50">用户名</th>
+                        <th width="40">姓名</th>
+                        <th width="40">性别</th>
+                        <th width="40">有效证件</th>
+                        <th width="40">英语水平等级</th>
+                        <th width="40">邮箱</th>
+                        <th width="40">测试成绩</th>
+                        <th width="40">岗位</th>
+                        <th width="40">地点</th>
+                        <th width="100">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.result)
+                    {
+                        <tr class="text-c">
+                            <td><input type="checkbox" value="@item.Id" name="Ids"></td>
+                            <td>@item.UserName</td>
+                            <td>@item.TrueName</td>
+                            <td>@(item.Sex == 0?"男": "女")</td>
+                            <td>@item.CardId</td>
+                            <td>@item.EnglishLevel</td>
+                            <td>@item.Email</td>
+                            <td><a href="/Admin/Project/StuPaper/@item.Id" class="btn btn-primary radius"><span>@((item.ExamScore == null || item.ExamScore == 0) ? "未测试" : "" + item.ExamScore.ToString() + "")</span>分 点击查看详情</a></td>
+                            <td>@item.Position</td>
+                            <td>@item.Address</td>
+                            <td class="td-manage"> <a title="删除" href="javascript:;" onclick="member_del(this,'@item.Id')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            @{
+                var pager = new Exam.CommonMVC.MyPager();
+                pager.CurrentLinkClassName = "curPager";
+                pager.MaxPagerCount = 10;
+                pager.PageIndex = (int)ViewBag.pageIndex;//这些数据，cshtml不知道，就必须让Action传递给我们
+                                                         //对于所有cshtml要用到，但是又获取不到的数据，都由Action来获取，然后放到ViewBag或者Model中传递给cshtml
+                pager.PageSize = 10;
+                pager.TotalCount = (int)Model.totalCount;
+                pager.UrlPattern = "/Admin/User/Index?pageIndex={pn}&ClassId=" + ViewBag.ClassId + "&Keyword=" + ViewBag.keyword;
+            }
+            <div id="pager" class="dataTables_paginate paging_simple_numbers">@Html.Raw(pager.GetPagerHtml())</div>
+        </div>
+    </div>
+
+</form>
+@section FooterScript{
+    <script type="text/javascript" src="~/lib/laypage/1.2/laypage.js"></script>
+    <script type="text/javascript">
+    function change_password(title, url, id, w, h) {
+        url = url + "/" + id;
+        layer_show(title, url, w, h);
+    }
+
+    function member_del(obj, id) {
+        layer.confirm('确认要删除吗？', function (index) {
+            $.ajax({
+                type: 'POST',
+                url: '/Admin/User/Delete/' + id,
+                dataType: 'json',
+                success: function (data) {
+                    $(obj).parents("tr").remove();
+                    layer.msg('已删除!', { icon: 1, time: 1000 });
+                },
+                error: function (data) {
+                    console.log(data.msg);
+                },
+            });
+        });
+    }
+
+
+
+    function batch_del() {
+        layer.confirm('确认要删除吗？', function (index) {
+            var formData = $("#formAdd").serializeArray();
+            $.ajax({
+                type: 'POST',
+                url: '/Admin/User/BatchDelete/',
+                data: formData,
+                dataType: 'json',
+                success: function (data) {
+                    //$(obj).parents("tr").remove();
+                    layer.msg('已删除!', { icon: 1, time: 1000 });
+                    location.reload();//刷新页面
+                },
+                error: function (data) {
+                    console.log(data.msg);
+                },
+            });
+        });
+    }
+    </script>
+
+}

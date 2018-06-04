@@ -1,0 +1,80 @@
+﻿
+
+<div style="background:url(/Public/Home/Images/denglu.jpg) top center  no-repeat ; height:800px;">
+</div>
+
+<div class="denglu">
+    <h3>登录</h3>
+    <form action="" method="post" id="formAdd">
+        <div class="denglu_form">
+            <img src="/Public/Home/Images/user.png" />
+            <input type="text" placeholder="用户名" name="username" id="username" required data-msg-required="请输入用户名" />
+        </div>
+        <div class="denglu_form">
+            <img src="/Public/Home/Images/icon10.png" />
+            <input type="password" placeholder="密码" name="password" id="password" required data-msg-required="请输入登录密码" />
+        </div>
+        <div class="denglu_form" style="border:none;">
+            验证码：
+            <input type="text" name="Verify" id="Verify" style="width:200px; border:1px solid #ccc; " />
+            <img src="/Home/CreateVerifyCode" onclick="this.src = '/Home/CreateVerifyCode?' + Math.random()" style="cursor: pointer;" /></b>
+        </div>
+        <input type="submit" class="denglu2" id="greenbg" value="登 录" />
+        <div class="denglu_a">
+            <a href="/Home/" class="forget">忘记密码？</a>
+            <a href="/Home/Register" class="zhuce">没有账号？马上注册 ></a>
+        </div>
+        
+    </form>
+</div>
+<script type="text/javascript">
+$(function(){
+    var saveAjax = function () {
+        var formData = $("#formAdd").serializeArray();
+        $.ajax({
+            url: "/Home/Login/",
+            type: "post",
+            data: formData,
+            dataType: "json",
+            success: function (res) {
+                if (res.status == "ok") {
+                    //parent.location.reload();//刷新父窗口
+                    alert("登录成功！");
+                    window.location.href = "/Home/UserIndex";
+                }
+                else {
+                    alert(res.errorMsg);
+                }
+            },
+            error: function () { alert("请求出错"); }
+        });
+    };
+
+    $("#formAdd").validate({
+		rules:{
+		    UserName: {
+				required:true,
+				minlength:2,
+				maxlength:16
+		    },
+		    PassWord: {
+		        required: true,
+		        minlength: 2,
+		        maxlength: 25
+		    },
+		    Verify: {
+		        required: true,
+		        minlength: 4,
+		        maxlength:4
+		    }
+
+		},
+		onkeyup:false,
+		focusCleanup:true,
+		success:"valid",
+		submitHandler:function(form){
+		    saveAjax();
+		}
+	});
+});
+</script>

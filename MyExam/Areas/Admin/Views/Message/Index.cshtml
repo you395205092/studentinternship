@@ -1,0 +1,32 @@
+﻿@model MessageDTO[]
+<form id="formAdd">
+    <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 留言管理 <span class="c-gray en">&gt;</span> 留言列表 <span class="r">共有数据：<strong>@Model.Length</strong> 条</span> <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+    <div class="page-container">
+        <div class="mt-20">
+            <table class="table table-border table-bordered table-hover table-bg table-sort">
+                <thead>
+                    <tr class="text-c">
+                        <th width="25"><input type="checkbox" name="" value=""></th>
+                        <th width="50">标题</th>
+                        <th width="40">提交时间</th>
+                        <th width="40">回复情况</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr class="text-c">
+                            <td><input type="checkbox" value="@item.Id" name="Ids"></td>
+                            <td>@item.Title</td>
+                            <td>@item.CreateDateTime</td>
+                            <td><a href="/Admin/Message/Show/@item.Id" class="btn btn-primary radius">@(string.IsNullOrEmpty(item.ReplyContent) ? "<span style='color:red'>未回复</span>" : "已回复")</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+
+</form>

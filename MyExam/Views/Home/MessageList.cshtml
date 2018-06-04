@@ -1,0 +1,60 @@
+﻿@model MessageDTO[]
+
+<style>
+    .xmbm_send table tr td {font-size:16px;
+    }
+</style>
+
+<div style="background:url(/Public/Home/Images/banner.jpg) top center  no-repeat ; height:400px;">
+</div>
+<div class="w1000">
+    <div class="pageleft">
+        <div class="leftbox1">
+            <div class="box1title">
+                会员中心
+            </div>
+        </div>
+        @Html.Partial("LeftUser")
+
+    </div>
+    <div class="pageright">
+        <dl class="righttitle">
+            <dt><b>在线答题</b></dt>
+            <dd>
+                您的位置：<a href="/Home/UserIndex">首页</a> &gt;
+                <a href="/Home/MessageList">留言中心</a>
+
+            </dd>
+        </dl>
+        <div class="content">
+            <div class="aboutus">
+                <div style="width:100px; float:right; margin-right:20px; margin-bottom:10px;"><span class="btnred"><a href="/Home/Message">留言</a></span></div>
+                    <table width="700" align="center" style=" margin:20px auto">
+                        <tr style="background:#eaeaea; text-align:center;">
+                            <td height="30">标题</td>
+                            <td>提交时间</td>
+                            <td>是否回复</td>
+                            <td>编辑</td>
+                        </tr>
+
+                        @foreach (var item in Model)
+                        {
+                            <tr style="text-align:center;">
+                                <td  height="30">@item.Title</td>
+                                <td>@item.CreateDateTime.ToShortDateString()</td>
+                                <td>@(string.IsNullOrEmpty(item.ReplyContent) ? "未回复" : "已回复")</td>
+                                <td class="btnred"><a href="/Home/MessageShow/@item.Id">查看</a></td>
+                            </tr>
+                        }
+                    </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+

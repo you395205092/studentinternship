@@ -1,0 +1,114 @@
+﻿@model SearchWorkPostResult
+@{
+    ViewBag.Title = "岗位列表";
+}
+<form id="formAdd">
+    <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 岗位管理 <span class="c-gray en">&gt;</span> 岗位列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+    <div class="page-container">
+        <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="batch_del()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a href="javascript:;" onclick=" layer_show('添加岗位', '/Admin/WorkPost/Add' , '' , '510' )" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加岗位</a></span>  <span class="r">共有数据：<strong>@Model.totalCount</strong> 条</span> </div>
+        <div class="mt-20">
+            <table class="table table-border table-bordered table-hover table-bg table-sort">
+                <thead>
+                    <tr class="text-c">
+                        <th width="25"><input type="checkbox" name="" value=""></th>
+                        <th width="50">项目</th>
+                        <th width="50">岗位</th>
+                        <th width="40">地址</th>
+                        <th width="40">经理</th>
+                        <th width="40">时薪</th>
+                        <th width="40">邮箱</th>
+                        <th width="40">余量</th>
+                        <th width="40">最低分</th>
+                        <th width="100">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.result)
+                    {
+                        <tr class="text-c">
+                            <td><input type="checkbox" value="@item.Id" name="Ids"></td>
+                            <td>@item.ProjectTitle</td>
+                            <td>@item.Position</td>
+                            <td>@item.Address</td>
+                            <td>@item.Manager</td>
+                            <td>@item.Wage</td>
+                            <td>@item.Email</td>
+                            <td>@item.CountNum</td>
+                            <td>@item.Score</td>
+                            <td class="td-manage"><a onclick="creatIframe('/Admin/WorkPost/StuList/@item.Id', '查看学生')" href="javascript:void(0)">查看学生</a> <a title="删除" href="javascript:;" onclick="member_del(this,'@item.Id')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            @{
+                var pager = new Exam.CommonMVC.MyPager();
+                pager.CurrentLinkClassName = "curPager";
+                pager.MaxPagerCount = 10;
+                pager.PageIndex = (int)ViewBag.pageIndex;//这些数据，cshtml不知道，就必须让Action传递给我们
+                                                         //对于所有cshtml要用到，但是又获取不到的数据，都由Action来获取，然后放到ViewBag或者Model中传递给cshtml
+                pager.PageSize = 10;
+                pager.TotalCount = (int)Model.totalCount;
+                pager.UrlPattern = "/Admin/WorkPost/Index?pageIndex={pn}&Keyword=" + ViewBag.keyword;
+            }
+            <div id="pager" class="dataTables_paginate paging_simple_numbers">@Html.Raw(pager.GetPagerHtml())</div>
+        </div>
+    </div>
+
+</form>
+@section FooterScript{
+    <script type="text/javascript" src="~/lib/laypage/1.2/laypage.js"></script>
+    <script type="text/javascript">
+    function change_password(title, url, id, w, h) {
+        url = url + "/" + id;
+        layer_show(title, url, w, h);
+    }
+    function stulist_open(title, url) {
+        var index = layer.open({
+            type: 2,
+            title: title,
+            content: url
+        });
+        layer.full(index);
+    }
+
+    function member_del(obj, id) {
+        layer.confirm('确认要删除吗？', function (index) {
+            $.ajax({
+                type: 'POST',
+                url: '/Admin/WorkPost/Delete/' + id,
+                dataType: 'json',
+                success: function (data) {
+                    //$(obj).parents("tr").remove();
+                    layer.msg('已删除!', { icon: 1, time: 1000 });
+                    location.reload();//刷新页面
+                },
+                error: function (data) {
+                    console.log(data.msg);
+                },
+            });
+        });
+    }
+
+
+
+    function batch_del() {
+        layer.confirm('确认要删除吗？', function (index) {
+            var formData = $("#formAdd").serializeArray();
+            $.ajax({
+                type: 'POST',
+                url: '/Admin/WorkPost/BatchDelete/',
+                data: formData,
+                dataType: 'json',
+                success: function (data) {
+                    layer.msg('已删除!', { icon: 1, time: 1000 });
+                    location.reload();//刷新页面
+                },
+                error: function (data) {
+                    console.log(data.msg);
+                },
+            });
+        });
+    }
+    </script>
+
+}

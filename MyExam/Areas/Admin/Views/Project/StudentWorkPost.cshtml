@@ -1,0 +1,87 @@
+﻿@model WorkPostDTO[]
+    <style>
+        .zp td {
+            border: #e3e3e3 1px solid; padding:5px;
+        }
+    </style>
+<article class="page-container">
+    <form action="" method="post" class="form form-horizontal" id="formAdd">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>用户名：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                @ViewData["TrueName"]
+                <input type="hidden" class="input-text" value="@ViewData["UserName"]" placeholder="" id="userId" name="userId">
+            </div>
+        </div>
+        
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">岗位：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <div>
+                    <table class="zp">
+                        <thead>
+                            <tr>
+                                <td>序号</td><td>招聘岗位</td><td>时薪</td><td>岗位数</td><td>地点</td>
+                            </tr>
+                        </thead>
+                        @foreach (var item in Model)
+                        {
+                        <tr>
+                            <td width="72"><input type="checkbox" value="@item.Id" name="ids"></td><td>@item.Position</td><td>@item.Wage</td><td>@item.CountNum</td><td>@item.Address</td>
+                        </tr>
+                        }
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                <button type="submit" class="btn btn-success radius" id="btnSave" name="admin-role-save"><i class="icon-ok"></i> 确定</button>
+            </div>
+        </div>
+    </form>
+</article>
+
+
+
+@section FooterScript{
+
+    <script type="text/javascript" src="~/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+    <script type="text/javascript" src="~/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+    <script type="text/javascript" src="~/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+    <script type="text/javascript">
+$(function(){
+    var saveAjax = function () {
+        var formData = $("#formAdd").serializeArray();
+        $.ajax({
+            url: "/Admin/Project/StudentWorkPost",
+            type: "post",
+            data: formData,
+            dataType: "json",
+            success: function (res) {
+                if (res.status == "ok") {
+                    alert("分配成功！");
+                    window.history.go(-2);
+                    //parent.location.reload();//刷新父窗口
+                }
+                else {
+                    alert(res.errorMsg);
+                }
+            },
+            error: function () { alert("请求出错"); }
+        });
+    };
+
+    $("#formAdd").validate({
+		
+		onkeyup:false,
+		focusCleanup:true,
+		success:"valid",
+		submitHandler: function (form) {
+		    saveAjax();
+		}
+	});
+});
+    </script>
+}
+

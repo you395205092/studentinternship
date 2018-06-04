@@ -1,0 +1,54 @@
+﻿@model UserDataMoreDTO
+
+
+
+
+
+<div style="background:url(/Public/Home/Images/banner.jpg) top center  no-repeat ; height:400px;">
+</div>
+<div class="w1000">
+    <div class="pageleft">
+        <div class="leftbox1">
+            <div class="box1title">
+                会员中心
+            </div>
+        </div>
+        @Html.Partial("LeftUser")
+
+    </div>
+    <div class="pageright">
+        <dl class="righttitle">
+            <dt><b>在线答题</b></dt>
+            <dd>
+                您的位置：<a href="/Home/UserIndex">首页</a> &gt;
+                <a href="/Home/MyPaper">在线答题</a>
+
+            </dd>
+        </dl>
+        <div class="content">
+            <div class="aboutus">
+                <form class="form form-horizontal" id="formAdd" action="/Home/IsUsaOK" method="post">
+
+                        <ul >
+                            <div></a></div>
+                            <li style="text-align:center;"><br />DS表：<a href="/Home/DownLoad">下载</a></li>
+                            <li style="text-align:center;">如果你已经抵达美国，请点击<br /></li>
+
+                            <li><input type="submit" value="抵美" class="submitBtn"></li>
+
+                        </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+

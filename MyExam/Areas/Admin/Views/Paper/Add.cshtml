@@ -1,0 +1,137 @@
+﻿@model BankClassDTO[]
+@{
+    ViewBag.Title = "添加试卷信息";
+}
+<style>
+    .input-text {
+    width:80%;}
+</style>
+<article class="page-container">
+    <form class="form form-horizontal" id="formAdd">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>名称：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="" placeholder="" id="Title" name="Title">
+            </div>
+        </div>
+        @foreach (var item in Model)
+            {
+            <div class="row cl">
+                <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>@item.Title：</label>
+                <div class="formControls col-xs-4 col-sm-4">
+                    <input type="text" class="input-text" value="50" placeholder="" name="PCount">  个
+                    
+                </div>
+                <div class="formControls col-xs-4 col-sm-4">
+                    <input type="text" class="input-text" value="2" placeholder="" name="PScore">  分
+
+                </div>
+                
+
+            </div>
+        }
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>总分：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="" placeholder="" name="ZScore" id="ZScore">  分
+            </div>
+            
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>考试时间：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="" placeholder="" id="ExamTime" name="ExamTime">  分钟
+            </div>
+
+        </div>
+
+        
+
+
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                <input class="btn btn-primary radius" type="submit" id="btnSave" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+            </div>
+        </div>
+    </form>
+</article>
+@section FooterScript{
+
+    <script type="text/javascript" src="~/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+    <script type="text/javascript" src="~/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+    <script type="text/javascript" src="~/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            $("input[type=text]").blur(function () {
+
+                var PCountArr = new Array();
+                var PScoreArr = new Array();
+                $("input[name='PCount']").each(function () {
+                    var value = $(this).val();
+                    PCountArr.push(value);
+                });
+                $("input[name='PScore']").each(function () {
+                    var value = $(this).val();
+                    PScoreArr.push(value);
+                });
+                var fs = 0;
+                for (var i = 0; i < PCountArr.length; i++) {
+                    //console.log(PCountArr[i])
+
+                    fs += parseInt(PCountArr[i]) * parseInt(PScoreArr[i]);
+                }
+
+
+                $("#ZScore").val(fs);
+            })
+            var saveAjax = function () {
+                var formData = $("#formAdd").serializeArray();
+
+                $.ajax({
+                    url: "/Admin/Paper/Add",
+                    type: "post",
+                    data: formData,
+                    dataType: "json",
+                    success: function (res) {
+                        if (res.status == "ok") {
+                            parent.location.reload();//刷新父窗口
+                        }
+                        else {
+                            alert(res.errorMsg);
+                        }
+                    },
+                    error: function () { alert("请求出错"); }
+                });
+            };
+
+            $("#formAdd").validate({
+                rules: {
+                    Title: {
+                        required: true,
+                        minlength: 5,
+                        maxlength: 50
+                    },
+                    PCount: {
+                        required: true,
+                        minlength: 1,
+                        maxlength: 255
+                    },
+                    PScore: {
+                        required: true,
+                        minlength: 1,
+                        maxlength: 255
+                    }
+
+
+                },
+                onkeyup: false,
+                focusCleanup: true,
+                success: "valid",
+                submitHandler: function (form) {
+                    saveAjax();
+                }
+            });
+        });
+    </script>
+}

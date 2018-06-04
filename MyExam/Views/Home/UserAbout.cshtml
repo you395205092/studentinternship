@@ -1,0 +1,74 @@
+﻿@model UserDTO
+<div style="background:url(/Public/Home/Images/banner.jpg) top center  no-repeat ; height:400px;">
+</div>
+<div class="w1000">
+    <div class="pageleft">
+        <div class="leftbox1">
+            <div class="box1title">
+                会员中心
+            </div>
+        </div>
+        @Html.Partial("LeftUser")
+
+    </div>
+    <div class="pageright"  style="background:#ffffff">
+        <dl class="righttitle">
+            <dt><b>在线答题</b></dt>
+            <dd>
+                您的位置：<a href="/Home/UserIndex">首页</a> &gt;
+                <a href="javascript:;">个人中心</a>
+
+            </dd>
+        </dl>
+        <div class="content">
+            <div class="aboutus">
+                <ul class="popup_content">
+                    <li class="zhuce_form">
+                        <label>账 号:</label>
+                        @Model.UserName
+                    </li>
+                    <li class="zhuce_form">
+                        <label>姓 名:</label>
+                        @Model.TrueName
+                    </li>
+                    <li class="zhuce_form">
+                        <label>生 日:</label>
+                        @Model.BirthDay
+                    </li>
+                    <li class="zhuce_form">
+                        <label>证 件:</label>
+                        @Model.CardId
+                    </li>
+                    <li class="zhuce_form">
+                        <label>英语水平:</label>
+                        @Model.EnglishLevel
+                    </li>
+                    <li class="zhuce_form">
+                        <label>邮 箱:</label>
+                        @Model.Email
+                    </li>
+                    <li class="zhuce_form">
+                        <label>联系方式:</label>
+                        @Model.Contact
+                    </li>
+                    <li class="zhuce_form">
+                        <label>选择项目:</label>
+                        @Model.ProjectName
+                    </li>
+                    <li class="zhuce_form">
+                        <label>选择岗位:</label>
+                        @Model.Position
+                    </li>
+                    <li class="zhuce_form">
+                        <label>当前状态:</label>
+                        @MyExam.Controllers.HomeController.GetState(Model.State)
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+

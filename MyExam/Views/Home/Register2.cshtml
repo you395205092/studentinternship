@@ -1,0 +1,67 @@
+﻿
+
+<div id="nav">
+    <div class="logo"><a href="index.html"><img src="/Public/Home/Images/logo.png" data-src="/Public/Home/Images/logo.png" /></a></div>
+    <div class="nav_ul">
+        <ul>
+            <li><a href="/Home" target='_blank'>首页</a></li>
+            <li><a href="/Home/Project" target='_blank'>项目介绍</a></li>
+            <li><a href="/Home/Academy" target='_blank'>项目报名</a></li>
+            <li><a href="/Home/Login" target='_blank'>登录 </a></li>
+            <li><a href="/Home/Register" target='_blank'>注册</a></li>
+        </ul>
+    </div>
+</div>
+<div class="banner">
+    <img src="/Public/Home/Images/denglu.jpg" />
+</div>
+
+<div class="denglu">
+    <h3>注册信息</h3>
+    <form action="" method="post" name="myform" id="viplogin">
+        <div class="zhuce_form">
+            <label>账 号:</label>
+            <input type="text" name="UserName" id="UserName" required data-msg-required="请输入账号" />
+        </div>
+        <div class="zhuce_form">
+            <label>密 码:</label>
+            <input type="text" class="ipt" id="PassWord" name="PassWord" required data-msg-required="请输入密码" />           
+        </div>
+        <div class="zhuce_form">
+            <label>姓 名:</label>
+            <input type="text" name="TrueName" id="TrueName" required data-msg-required="请输入账号" />
+        </div>
+        <div>
+            <label>性 别:</label>
+            <input type="radio" name="Sex" value="0"/>男 <input type="radio" name="Sex" value="1" />女
+        </div>
+        <div class="zhuce_form">
+            <label>生 日:</label>
+            <input type="date" name="BirthDay" id="BirthDay"  />
+        </div>
+        <div class="zhuce_form">
+            <label>证 件:</label>
+            <input type="date" name="CardId" id="CardId" />
+        </div>
+        <div class="zhuce_form">
+            <label>证 件:</label>
+            <input type="text" name="EnglishLevel" id="EnglishLevel" required data-msg-required="请输入账号" />
+        </div>
+        <div class="zhuce_form">
+            <label>邮 箱:</label>
+            <input type="text" name="Email" id="Email" required data-msg-required="请输入账号" />
+        </div>
+        
+        <div class="yanzhengma">
+            <label>验证图片:</label>
+            <input type="text" name="verify" id="verify" required data-msg-required="请输入图片验证码" />
+            <b><img src="/Home/CreateVerifyCode" onclick="this.src = '/Home/CreateVerifyCode?' + Math.random()" style="cursor: pointer;" /></b>
+        </div>
+
+        <input type="submit" class="zhuce2" id="bluebg" value="提 交" />
+        <div class="denglu_a">
+            <a href="/index.php/Home/User/login" class="zhuce">已有账号，马上登录></a>
+        </div>
+
+    </form>
+</div>

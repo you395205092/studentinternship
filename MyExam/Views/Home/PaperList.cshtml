@@ -1,0 +1,36 @@
+﻿@model PaperDTO
+   
+<div style="background:url(/Public/Home/Images/banner.jpg) top center  no-repeat ; height:400px;">
+</div>
+<div class="w1000">
+    <div class="pageleft">
+        <div class="leftbox1">
+            <div class="box1title">
+                会员中心
+            </div>
+        </div>
+        @Html.Partial("LeftUser")
+
+    </div>
+    <div class="pageright">
+        <dl class="righttitle">
+            <dt><b>在线答题</b></dt>
+            <dd>
+                您的位置：<a href="/Home/UserIndex">首页</a> &gt;
+                <a href="/Home/MyPaper">在线答题</a>
+
+            </dd>
+        </dl>
+        <div class="content">
+            <div class="aboutus">
+
+                <p style="text-align:center">您已经报名了，进入答题阶段！</p>
+                <p>
+                    <a href="/Home/Paper/@Model.Id" class="btnred submitBtn" style="color:#ffffff">答题</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+

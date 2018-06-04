@@ -1,0 +1,53 @@
+﻿@model MessageDTO
+
+<div style="background:url(/Public/Home/Images/banner.jpg) top center  no-repeat ; height:400px;">
+</div>
+<div class="w1000">
+    <div class="pageleft">
+        <div class="leftbox1">
+            <div class="box1title">
+                会员中心
+            </div>
+        </div>
+        @Html.Partial("LeftUser")
+
+    </div>
+    <div class="pageright">
+        <dl class="righttitle">
+            <dt><b>在线答题</b></dt>
+            <dd>
+                您的位置：<a href="/Home/UserIndex">首页</a> &gt;
+                <a href="/Home/MessageList">留言中心</a>
+
+            </dd>
+        </dl>
+        <div class="content">
+            <div class="aboutus">
+                <table width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+                    <tr>
+                        <td height="30" width="90">标题:</td>
+                        <td>@Model.Title</td>
+                        <td height="30" width="90">提交时间:</td>
+                        <td width="90">@Model.CreateDateTime.ToShortDateString()</td>
+                    </tr>
+
+                    <tr>
+                        <td height="30" >内容:</td>
+                        <td colspan="3">@Html.Raw(Model.MesContent)</td>
+                    </tr>
+                    <tr>
+                        <td height="30">回复:</td>
+                        <td colspan="3">@Model.ReplyContent</td>
+                    </tr>
+                    <tr>
+                        <td height="30">回复时间:</td>
+                        <td colspan="3">@Model.ReplayTime</td>
+                    </tr>
+
+                </table>
+                
+            </div>
+        </div>
+    </div>
+</div>
+

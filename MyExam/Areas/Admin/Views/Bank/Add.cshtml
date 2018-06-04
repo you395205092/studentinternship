@@ -1,0 +1,133 @@
+﻿@model BankViewAddModel
+@{
+    ViewBag.Title = "添加题目";
+}
+
+<article class="page-container">
+    <form class="form form-horizontal" id="formAdd">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>题目名称：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="" placeholder="" id="Subject" name="Subject">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>题目类型：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <select name="ClassId" id="ClassId">
+                    @foreach (var item in Model.BankClass)
+                    {
+                        <option value="@item.Id" selected="@(item.Id==Model.Id)">@item.Title</option>
+                    }
+                </select>
+
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>A：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="" placeholder="" id="ItemA" name="ItemA">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>B：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="" placeholder="" id="ItemB" name="ItemB">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>C：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="" placeholder="" id="ItemC" name="ItemC">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>D：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="" placeholder="" id="ItemD" name="ItemD">
+            </div>
+        </div>
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>E：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="" placeholder="" id="ItemE" name="ItemE">
+            </div>
+        </div>
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>答案：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="" placeholder="" id="Answer" name="Answer">
+            </div>
+        </div>
+
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                <input class="btn btn-primary radius" type="submit" id="btnSave" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+            </div>
+        </div>
+    </form>
+</article>
+@section FooterScript{
+
+    <script type="text/javascript" src="~/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+    <script type="text/javascript" src="~/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+    <script type="text/javascript" src="~/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+    <script type="text/javascript">
+$(function(){
+    var saveAjax = function () {
+        var formData = $("#formAdd").serializeArray();
+        $.ajax({
+            url: "/Admin/Bank/Add",
+            type: "post",
+            data: formData,
+            dataType: "json",
+            success: function (res) {
+                if (res.status == "ok") {
+                    layer.msg('添加成功!', { icon: 1, time: 1000 });
+                    parent.location.reload();//刷新父窗口
+                }
+                else {
+                    alert(res.errorMsg);
+                }
+            },
+            error: function () { alert("请求出错"); }
+        });
+    };
+
+    $("#formAdd").validate({
+		rules:{
+		    Subject: {
+		        required: true,
+		        minlength: 2,
+		        maxlength: 50
+		    },
+		    ItemA: {
+		        required: true,
+		        minlength: 2,
+		        maxlength: 255
+		    },
+		    ItemB: {
+		        required: true,
+		        minlength: 2,
+		        maxlength: 255
+		    }
+            ,
+		    Answer: {
+		        required: true,
+		        minlength: 1,
+		        maxlength: 5
+		    }
+
+		},
+		onkeyup:false,
+		focusCleanup:true,
+		success:"valid",
+		submitHandler:function(form){
+		    saveAjax();
+		}
+	});
+});
+    </script>
+}

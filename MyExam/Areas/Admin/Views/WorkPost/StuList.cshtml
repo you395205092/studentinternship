@@ -1,0 +1,48 @@
+﻿@model UserDTO[]
+@{
+    ViewBag.Title = "学生列表";
+}
+<form id="formAdd">
+    <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 岗位管理 <span class="c-gray en">&gt;</span> 学生列表 <span class="r">共有数据：<strong>@Model.Length</strong> 条</span> <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+    <div class="page-container">
+        <div class="mt-20">
+            <table class="table table-border table-bordered table-hover table-bg table-sort">
+                <thead>
+                    <tr class="text-c">
+                        <th width="25"><input type="checkbox" name="" value=""></th>
+                        <th width="50">用户名</th>
+                        <th width="40">姓名</th>
+                        <th width="40">性别</th>
+                        <th width="40">有效证件</th>
+                        <th width="40">英语水平等级</th>
+                        <th width="40">邮箱</th>
+                        <th width="40">测试成绩</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr class="text-c">
+                            <td><input type="checkbox" value="@item.Id" name="Ids"></td>
+                            <td>@item.UserName</td>
+                            <td>@item.TrueName</td>
+                            <td>@(item.Sex == 0 ? "男" : "女")</td>
+                            <td>@item.CardId</td>
+                            <td>@item.EnglishLevel</td>
+                            <td>@item.Email</td>
+                            <td>@(item.ExamScore == null ? "未测试" : "已测试")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            
+            
+        </div>
+    </div>
+
+</form>
+@section FooterScript{
+    <script type="text/javascript" src="~/lib/laypage/1.2/laypage.js"></script>
+
+
+}

@@ -1,0 +1,127 @@
+﻿<script type="text/javascript" src="/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+
+<div style="background:url(/Public/Home/Images/banner.jpg) top center  no-repeat ; height:400px;">
+</div>
+
+<div class="xmbm_send">
+    <form action="" method="post" name="formAdd" id="formAdd">
+        <ol class="popup_content">
+            <li class="zhuce_form">
+                <label>账 号:</label>
+                <input type="text" name="UserName" id="UserName"  /><span>*必填</span>
+            </li>
+            <li class="zhuce_form">
+                <label>密 码:</label>
+                <input type="password" name="PassWord" class="ipt" id="PassWord" /><span>*必填</span>
+            </li>
+            <li class="zhuce_form">
+                <label>姓 名:</label>
+                <input type="text" name="TrueName" id="TrueName" /><span>*必填</span>
+            </li>
+            <li class="zhuce_formradio">
+                <label>性 别:</label>
+                <input type="radio" name="Sex" value="0" checked="checked" /><span>男</span> <input type="radio" name="Sex" value="1" /><span>女</span>
+            </li>
+            <li class="zhuce_form">
+                <label>生 日:</label>
+                <input type="text" name="BirthDay" id="BirthDay" onfocus="WdatePicker({ dateFmt: 'yyyy-MM-dd', startDate: '1990-01-01' })" class="input-text Wdate"  /><span>*必填</span>
+                
+            </li>
+            <li class="zhuce_form">
+                <label>证 件:</label>
+                <input type="text" name="CardId" id="CardId" />
+            </li>
+            <li class="zhuce_form">
+                <label>英语水平:</label>
+                <select name="EnglishLevel" id="EnglishLevel">
+                    <option value="大学英语四级">大学英语四级</option>
+                    <option value="大学英语六级">大学英语六级</option>
+                    <option value="雅思6分及以上">雅思6分及以上</option>
+                    <option value="雅思5.5分及以下">雅思5.5分及以下</option>
+                </select>
+            </li>
+            <li class="zhuce_form">
+                <label>邮 箱:</label>
+                <input type="email" name="Email" id="Email"/>
+            </li>
+            <li class="zhuce_form">
+                <label>联系方式:</label>
+                <input type="text" name="Contact" id="Contact"/>
+            </li>
+            <li class="yanzhengma">
+                <label>验证图片:</label>
+                <input type="text" name="Verify" id="Verify" />
+                <b><img src="/Home/CreateVerifyCode" onclick="this.src = '/Home/CreateVerifyCode?' + Math.random()" style="cursor: pointer;" /></b>
+            </li>
+            <li class="denglu_a">
+                <a href="/Home/Login" class="zhuce">已有账号，马上登录></a>
+            </li>
+
+            <li><input type="submit" value="立即提交" class="submitBtn"></li>
+
+        </ol>
+    </form>
+
+
+
+
+<script type="text/javascript">
+$(function(){
+    var saveAjax = function () {
+        var formData = $("#formAdd").serializeArray();
+        $.ajax({
+            url: "/Home/Register/",
+            type: "post",
+            data: formData,
+            dataType: "json",
+            success: function (res) {
+                if (res.status == "ok") {
+                    //parent.location.reload();//刷新父窗口
+                    alert("注册成功！");
+                    window.location.href = "/Home/Login";
+                }
+                else {
+                    alert(res.errorMsg);
+                }
+            },
+            error: function () { alert("请求出错"); }
+        });
+    };
+
+    $("#formAdd").validate({
+		rules:{
+		    UserName: {
+				required:true,
+				minlength:2,
+				maxlength:16
+		    },
+		    PassWord: {
+		        required: true,
+		        minlength: 2,
+		        maxlength: 25
+		    }
+            ,
+		    BirthDay: {
+		        required: true
+		    }
+            ,
+		    Verify: {
+		        required: true,
+		        minlength: 4,
+		        maxlength:4
+		    }
+
+		},
+		onkeyup:false,
+		focusCleanup:true,
+		success:"valid",
+		submitHandler:function(form){
+		    saveAjax();
+		}
+	});
+});
+    </script>
+
+
+
+</div>

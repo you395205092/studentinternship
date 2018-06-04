@@ -1,0 +1,51 @@
+﻿@model ProjectDTO[]
+<div style="background:url(/Public/Home/Images/banner.jpg) top center  no-repeat ; height:400px;">
+</div>
+
+
+<div class="xiamgmujies">
+    @foreach (var item in Model)
+    {
+    
+    <dl>
+        <dt><a href="/Home/ProjectShow/@item.Id" target="_blank"><img src="@item.PicUrl" width="270" height="353"></a></dt>
+        <dd>
+            <h3><a href="/Home/ProjectShow/@item.Id" target="_blank"><strong>@item.Title</strong><span>@item.enTitle</span></a></h3>
+            <p>@item.SubTitle<a href="/Home/ProjectShow/@item.Id" id="red" target="_blank">查看更多&gt;</a></p>
+            <div class="bianji">
+                <a href="javascript:;" id="redbg"  onclick="tj(this)" class="zxun" rel="@item.Id">意向报名</a>
+            </div>
+        </dd>
+    </dl>
+    }
+
+</div>
+
+
+<script>
+
+        function tj(obj){
+            
+
+            //alert(answers.join(","));
+            //alert(classids.join(","));
+            $.ajax({
+                url: "/Home/ProjectBM", type: "post", dataType: "json",
+                data: { id: $(obj).attr("rel") },
+                success: function (res) {
+                    if (res.status == "ok") {
+                        alert("报名成功");
+                        location.href = "/Home/PaperList";
+                    } else {
+                        alert(res.data)
+                    }
+                    
+                },
+                error: function () {
+                    alert("删除网络请求失败");
+                }
+            });
+
+        }
+
+</script>

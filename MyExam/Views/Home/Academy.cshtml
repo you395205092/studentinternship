@@ -1,0 +1,60 @@
+﻿@model ProjectDTO[]
+<div style="background:url(/Public/Home/Images/banner.jpg) top center  no-repeat ; height:400px;">
+</div>
+
+<div class="xmbm_send">
+    <form action="" method="post" name="formAdd" id="formAdd">
+        <ol class="popup_content">
+            <li class="zhuce_form">
+                <label>项目:</label>
+                <select name="ProjectId" id="ProjectId">
+                    @foreach (var item in Model)
+                    {
+                        <option value="@item.Id">@item.Title</option>
+                    }
+                </select>
+            </li>
+            <li style="margin:20px auto;"><input type="submit" value="报名" class="submitBtn"></li>
+
+        </ol>
+    </form>
+
+
+
+        <script type="text/javascript">
+$(function(){
+    var saveAjax = function () {
+
+        $.ajax({
+            url: "/Home/ProjectBM",
+            type: "post",
+            data: { id: $("#ProjectId").val() },
+            dataType: "json",
+            success: function (res) {
+                if (res.status == "ok") {
+                    //parent.location.reload();//刷新父窗口
+                    alert("报名成功");
+                    window.location.href = "/Home/PaperList";
+                }
+                else {
+                    alert(res.errorMsg);
+                }
+            },
+            error: function () { alert("请求出错"); }
+        });
+    };
+
+    $("#formAdd").validate({
+        
+        onkeyup:false,
+        focusCleanup:true,
+        success:"valid",
+        submitHandler:function(form){
+            saveAjax();
+        }
+    });
+});
+    </script>
+
+
+</div>

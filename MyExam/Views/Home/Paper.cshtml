@@ -1,0 +1,101 @@
+﻿@model BankDTO[]
+<div style="background:url(/Public/Home/Images/banner.jpg) top center  no-repeat ; height:400px;">
+</div>
+<div class="w1000">
+    <div class="pageleft">
+        <div class="leftbox1">
+            <div class="box1title">
+                会员中心
+            </div>
+        </div>
+        @Html.Partial("LeftUser")
+
+    </div>
+    <div class="pageright">
+        <dl class="righttitle">
+            <dt><b>在线答题</b></dt>
+            <dd>
+                您的位置：<a href="/Home/UserIndex">首页</a> &gt;
+                <a href="/Home/PaperList">在线答题</a>
+
+            </dd>
+        </dl>
+        <div class="content">
+            <div class="aboutus">
+                <ul>
+                    @for (int i = 0; i < Model.Length; i++)
+                    {
+                        BankDTO item = Model[i];
+                        <li><span>题目</span>@(i + 1)：@item.Subject<input type="hidden" classid="@item.ClassId" value="@item.Id" name="tmIds" /></li>
+                        <li><input type="radio" value="A" name="selectedIds_@item.Id" /> ：@item.ItemA</li>
+                        <li><input type="radio" value="B" name="selectedIds_@item.Id" />：@item.ItemB</li>
+                        if (!string.IsNullOrEmpty(item.ItemC))
+                        {
+                            <li><input type="radio" value="C" name="selectedIds_@item.Id" />：@item.ItemC</li>
+                        }
+                        if (!string.IsNullOrEmpty(item.ItemD))
+                        {
+                            <li><input type="radio" value="D" name="selectedIds_@item.Id" />：@item.ItemD</li>
+                        }
+                        if (!string.IsNullOrEmpty(item.ItemE))
+                        {
+                            <li><input type="radio" value="E" name="selectedIds_@item.Id" />：@item.ItemE</li>
+                        }
+                    }
+                    <input type="hidden" name="paperid" id="paperid" value="@ViewBag.paperid" />
+                    <li><input type="button" name="name" value="提交" id="tj" class="zhuce2" /></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    
+    $(function () {
+        $("#tj").click(function () {
+            var f = true;
+            
+            var selectedIds = new Array();
+            var answers = new Array();
+            var classids = new Array();
+            $("input[name='tmIds']").each(function () {
+                var value = $(this).val();
+                var dddd = $(this).attr("classid");
+                selectedIds.push(value);
+                classids.push(dddd);
+                answers.push($("input[name='selectedIds_" + value + "']:checked").val());                
+                
+            });
+            var f = true;
+            for (var i = 0; i < answers.length; i++) {
+                //alert(answers[i])
+                if (answers[i] == undefined) {
+                    alert("你有问题没回答");
+                    f = false;
+                    return;
+                }
+                
+            }
+            
+            //alert(answers.join(","));
+            //alert(classids.join(","));
+            $.ajax({
+                url: "/Home/PaperUpdate", type: "post", dataType: "json",
+                data: { selectedIds: selectedIds.join(","), answers: answers.join(","), classids: classids.join(","), paperid: $("#paperid").val() },
+                success: function (res) {
+
+                    location.href = "/Home/WorkPost";
+                },
+                error: function () {
+                    alert("删除网络请求失败");
+                }
+            });
+
+        })
+    })
+    
+</script>
+
+

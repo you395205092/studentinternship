@@ -1,0 +1,2698 @@
+2018-04-25 16:00:53,333 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:00:53 +08:00
+
+2018-04-25 16:00:53,347 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.T_Admins','dbo.T_BankClass','dbo.T_Banks','dbo.T_Messages','dbo.T_Papers','dbo.T_ProjectBMs','dbo.T_Projects','dbo.T_StudentWorkPosts','dbo.T_StuPaperLogs','dbo.T_StuPapers','dbo.T_Users','dbo.T_WorkPosts','dbo.T_UserDataMores')
+    OR t.TABLE_NAME = 'EdmMetadata'
+2018-04-25 16:00:53,347 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:00:53,348 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:00:53 +08:00
+
+2018-04-25 16:00:53,413 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 63 ms with result: 12
+
+2018-04-25 16:00:53,413 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:00:53,413 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:00:53 +08:00
+
+2018-04-25 16:00:53,609 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:00:53 +08:00
+
+2018-04-25 16:00:55,290 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+2018-04-25 16:00:55,290 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:00:55,291 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: 'Exam.Service.MyDbContext' (Type = String, Size = 4000)
+
+2018-04-25 16:00:55,291 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:00:55 +08:00
+
+2018-04-25 16:00:55,321 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Failed in 30 ms with error: 对象名 'dbo.__MigrationHistory' 无效。
+
+2018-04-25 16:00:55,322 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:00:55,323 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:00:55 +08:00
+
+2018-04-25 16:00:55,326 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:00:55 +08:00
+
+2018-04-25 16:00:55,328 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+    )  AS [GroupBy1]
+2018-04-25 16:00:55,328 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:00:55,328 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:00:55 +08:00
+
+2018-04-25 16:00:55,333 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Failed in 5 ms with error: 对象名 'dbo.__MigrationHistory' 无效。
+
+2018-04-25 16:00:55,333 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:00:55,333 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:00:55 +08:00
+
+2018-04-25 16:00:55,445 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:00:55 +08:00
+
+2018-04-25 16:00:55,570 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[UserName] AS [UserName], 
+    [Extent1].[TrueName] AS [TrueName], 
+    [Extent1].[PasswordSalt] AS [PasswordSalt], 
+    [Extent1].[PasswordHash] AS [PasswordHash], 
+    [Extent1].[Sex] AS [Sex], 
+    [Extent1].[BirthDay] AS [BirthDay], 
+    [Extent1].[CardId] AS [CardId], 
+    [Extent1].[EnglishLevel] AS [EnglishLevel], 
+    [Extent1].[Email] AS [Email], 
+    [Extent1].[Contact] AS [Contact], 
+    [Extent1].[LoginTimes] AS [LoginTimes], 
+    [Extent1].[LastDateTime] AS [LastDateTime], 
+    [Extent1].[ExamScore] AS [ExamScore], 
+    [Extent1].[WorkPostId] AS [WorkPostId], 
+    [Extent1].[State] AS [State], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Users] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+    ORDER BY [Extent1].[CreateDateTime] DESC
+2018-04-25 16:00:55,570 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:00:55,570 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:00:55 +08:00
+
+2018-04-25 16:00:55,594 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 23 ms with result: SqlDataReader
+
+2018-04-25 16:00:55,594 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:00:55,675 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:00:55 +08:00
+
+2018-04-25 16:01:02,854 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:01:02 +08:00
+
+2018-04-25 16:01:02,865 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[UserName] AS [UserName], 
+    [Project1].[TrueName] AS [TrueName], 
+    [Project1].[PasswordSalt] AS [PasswordSalt], 
+    [Project1].[PasswordHash] AS [PasswordHash], 
+    [Project1].[Sex] AS [Sex], 
+    [Project1].[BirthDay] AS [BirthDay], 
+    [Project1].[CardId] AS [CardId], 
+    [Project1].[EnglishLevel] AS [EnglishLevel], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[Contact] AS [Contact], 
+    [Project1].[LoginTimes] AS [LoginTimes], 
+    [Project1].[LastDateTime] AS [LastDateTime], 
+    [Project1].[ExamScore] AS [ExamScore], 
+    [Project1].[WorkPostId] AS [WorkPostId], 
+    [Project1].[State] AS [State], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[UserName] AS [UserName], 
+        [Extent1].[TrueName] AS [TrueName], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[Sex] AS [Sex], 
+        [Extent1].[BirthDay] AS [BirthDay], 
+        [Extent1].[CardId] AS [CardId], 
+        [Extent1].[EnglishLevel] AS [EnglishLevel], 
+        [Extent1].[Email] AS [Email], 
+        [Extent1].[Contact] AS [Contact], 
+        [Extent1].[LoginTimes] AS [LoginTimes], 
+        [Extent1].[LastDateTime] AS [LastDateTime], 
+        [Extent1].[ExamScore] AS [ExamScore], 
+        [Extent1].[WorkPostId] AS [WorkPostId], 
+        [Extent1].[State] AS [State], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Users] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:01:02,865 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:01:02,865 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:01:02,865 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:01:02 +08:00
+
+2018-04-25 16:01:02,869 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 4 ms with result: SqlDataReader
+
+2018-04-25 16:01:02,869 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:01:02,869 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:01:02 +08:00
+
+2018-04-25 16:01:02,870 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:01:02 +08:00
+
+2018-04-25 16:01:02,871 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[UserName] AS [UserName], 
+    [Project1].[TrueName] AS [TrueName], 
+    [Project1].[PasswordSalt] AS [PasswordSalt], 
+    [Project1].[PasswordHash] AS [PasswordHash], 
+    [Project1].[Sex] AS [Sex], 
+    [Project1].[BirthDay] AS [BirthDay], 
+    [Project1].[CardId] AS [CardId], 
+    [Project1].[EnglishLevel] AS [EnglishLevel], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[Contact] AS [Contact], 
+    [Project1].[LoginTimes] AS [LoginTimes], 
+    [Project1].[LastDateTime] AS [LastDateTime], 
+    [Project1].[ExamScore] AS [ExamScore], 
+    [Project1].[WorkPostId] AS [WorkPostId], 
+    [Project1].[State] AS [State], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[UserName] AS [UserName], 
+        [Extent1].[TrueName] AS [TrueName], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[Sex] AS [Sex], 
+        [Extent1].[BirthDay] AS [BirthDay], 
+        [Extent1].[CardId] AS [CardId], 
+        [Extent1].[EnglishLevel] AS [EnglishLevel], 
+        [Extent1].[Email] AS [Email], 
+        [Extent1].[Contact] AS [Contact], 
+        [Extent1].[LoginTimes] AS [LoginTimes], 
+        [Extent1].[LastDateTime] AS [LastDateTime], 
+        [Extent1].[ExamScore] AS [ExamScore], 
+        [Extent1].[WorkPostId] AS [WorkPostId], 
+        [Extent1].[State] AS [State], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Users] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:01:02,871 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:01:02,872 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:01:02,872 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:01:02 +08:00
+
+2018-04-25 16:01:02,873 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 1 ms with result: SqlDataReader
+
+2018-04-25 16:01:02,873 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:01:02,873 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:01:02 +08:00
+
+2018-04-25 16:01:04,378 [5] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:01:04 +08:00
+
+2018-04-25 16:01:04,378 [5] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[UserName] AS [UserName], 
+    [Project1].[TrueName] AS [TrueName], 
+    [Project1].[PasswordSalt] AS [PasswordSalt], 
+    [Project1].[PasswordHash] AS [PasswordHash], 
+    [Project1].[Sex] AS [Sex], 
+    [Project1].[BirthDay] AS [BirthDay], 
+    [Project1].[CardId] AS [CardId], 
+    [Project1].[EnglishLevel] AS [EnglishLevel], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[Contact] AS [Contact], 
+    [Project1].[LoginTimes] AS [LoginTimes], 
+    [Project1].[LastDateTime] AS [LastDateTime], 
+    [Project1].[ExamScore] AS [ExamScore], 
+    [Project1].[WorkPostId] AS [WorkPostId], 
+    [Project1].[State] AS [State], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[UserName] AS [UserName], 
+        [Extent1].[TrueName] AS [TrueName], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[Sex] AS [Sex], 
+        [Extent1].[BirthDay] AS [BirthDay], 
+        [Extent1].[CardId] AS [CardId], 
+        [Extent1].[EnglishLevel] AS [EnglishLevel], 
+        [Extent1].[Email] AS [Email], 
+        [Extent1].[Contact] AS [Contact], 
+        [Extent1].[LoginTimes] AS [LoginTimes], 
+        [Extent1].[LastDateTime] AS [LastDateTime], 
+        [Extent1].[ExamScore] AS [ExamScore], 
+        [Extent1].[WorkPostId] AS [WorkPostId], 
+        [Extent1].[State] AS [State], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Users] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:01:04,378 [5] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:01:04,378 [5] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:01:04,378 [5] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:01:04 +08:00
+
+2018-04-25 16:01:04,380 [5] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 1 ms with result: SqlDataReader
+
+2018-04-25 16:01:04,380 [5] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:01:04,380 [5] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:01:04 +08:00
+
+2018-04-25 16:01:04,382 [5] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:01:04 +08:00
+
+2018-04-25 16:01:04,382 [5] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[UserName] AS [UserName], 
+    [Project1].[TrueName] AS [TrueName], 
+    [Project1].[PasswordSalt] AS [PasswordSalt], 
+    [Project1].[PasswordHash] AS [PasswordHash], 
+    [Project1].[Sex] AS [Sex], 
+    [Project1].[BirthDay] AS [BirthDay], 
+    [Project1].[CardId] AS [CardId], 
+    [Project1].[EnglishLevel] AS [EnglishLevel], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[Contact] AS [Contact], 
+    [Project1].[LoginTimes] AS [LoginTimes], 
+    [Project1].[LastDateTime] AS [LastDateTime], 
+    [Project1].[ExamScore] AS [ExamScore], 
+    [Project1].[WorkPostId] AS [WorkPostId], 
+    [Project1].[State] AS [State], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[UserName] AS [UserName], 
+        [Extent1].[TrueName] AS [TrueName], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[Sex] AS [Sex], 
+        [Extent1].[BirthDay] AS [BirthDay], 
+        [Extent1].[CardId] AS [CardId], 
+        [Extent1].[EnglishLevel] AS [EnglishLevel], 
+        [Extent1].[Email] AS [Email], 
+        [Extent1].[Contact] AS [Contact], 
+        [Extent1].[LoginTimes] AS [LoginTimes], 
+        [Extent1].[LastDateTime] AS [LastDateTime], 
+        [Extent1].[ExamScore] AS [ExamScore], 
+        [Extent1].[WorkPostId] AS [WorkPostId], 
+        [Extent1].[State] AS [State], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Users] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:01:04,382 [5] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:01:04,382 [5] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:01:04,382 [5] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:01:04 +08:00
+
+2018-04-25 16:01:04,385 [5] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2018-04-25 16:01:04,385 [5] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:01:04,385 [5] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:01:04 +08:00
+
+2018-04-25 16:01:04,420 [5] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:01:04 +08:00
+
+2018-04-25 16:01:04,427 [5] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Project1].[WorkPostId] AS [WorkPostId]
+    FROM ( SELECT 
+        [Extent1].[WorkPostId] AS [WorkPostId], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime]
+        FROM [dbo].[T_StudentWorkPosts] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[UserId] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:01:04,427 [5] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:01:04,427 [5] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:01:04,427 [5] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:01:04 +08:00
+
+2018-04-25 16:01:04,432 [5] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 5 ms with result: SqlDataReader
+
+2018-04-25 16:01:04,433 [5] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:01:04,437 [5] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:01:04 +08:00
+
+2018-04-25 16:01:06,559 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:01:06 +08:00
+
+2018-04-25 16:01:06,560 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[UserName] AS [UserName], 
+    [Project1].[TrueName] AS [TrueName], 
+    [Project1].[PasswordSalt] AS [PasswordSalt], 
+    [Project1].[PasswordHash] AS [PasswordHash], 
+    [Project1].[Sex] AS [Sex], 
+    [Project1].[BirthDay] AS [BirthDay], 
+    [Project1].[CardId] AS [CardId], 
+    [Project1].[EnglishLevel] AS [EnglishLevel], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[Contact] AS [Contact], 
+    [Project1].[LoginTimes] AS [LoginTimes], 
+    [Project1].[LastDateTime] AS [LastDateTime], 
+    [Project1].[ExamScore] AS [ExamScore], 
+    [Project1].[WorkPostId] AS [WorkPostId], 
+    [Project1].[State] AS [State], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[UserName] AS [UserName], 
+        [Extent1].[TrueName] AS [TrueName], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[Sex] AS [Sex], 
+        [Extent1].[BirthDay] AS [BirthDay], 
+        [Extent1].[CardId] AS [CardId], 
+        [Extent1].[EnglishLevel] AS [EnglishLevel], 
+        [Extent1].[Email] AS [Email], 
+        [Extent1].[Contact] AS [Contact], 
+        [Extent1].[LoginTimes] AS [LoginTimes], 
+        [Extent1].[LastDateTime] AS [LastDateTime], 
+        [Extent1].[ExamScore] AS [ExamScore], 
+        [Extent1].[WorkPostId] AS [WorkPostId], 
+        [Extent1].[State] AS [State], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Users] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:01:06,560 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:01:06,560 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:01:06,560 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:01:06 +08:00
+
+2018-04-25 16:01:06,563 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 3 ms with result: SqlDataReader
+
+2018-04-25 16:01:06,563 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:01:06,564 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:01:06 +08:00
+
+2018-04-25 16:01:17,675 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:01:17 +08:00
+
+2018-04-25 16:01:17,676 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[UserName] AS [UserName], 
+    [Project1].[TrueName] AS [TrueName], 
+    [Project1].[PasswordSalt] AS [PasswordSalt], 
+    [Project1].[PasswordHash] AS [PasswordHash], 
+    [Project1].[Sex] AS [Sex], 
+    [Project1].[BirthDay] AS [BirthDay], 
+    [Project1].[CardId] AS [CardId], 
+    [Project1].[EnglishLevel] AS [EnglishLevel], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[Contact] AS [Contact], 
+    [Project1].[LoginTimes] AS [LoginTimes], 
+    [Project1].[LastDateTime] AS [LastDateTime], 
+    [Project1].[ExamScore] AS [ExamScore], 
+    [Project1].[WorkPostId] AS [WorkPostId], 
+    [Project1].[State] AS [State], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[UserName] AS [UserName], 
+        [Extent1].[TrueName] AS [TrueName], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[Sex] AS [Sex], 
+        [Extent1].[BirthDay] AS [BirthDay], 
+        [Extent1].[CardId] AS [CardId], 
+        [Extent1].[EnglishLevel] AS [EnglishLevel], 
+        [Extent1].[Email] AS [Email], 
+        [Extent1].[Contact] AS [Contact], 
+        [Extent1].[LoginTimes] AS [LoginTimes], 
+        [Extent1].[LastDateTime] AS [LastDateTime], 
+        [Extent1].[ExamScore] AS [ExamScore], 
+        [Extent1].[WorkPostId] AS [WorkPostId], 
+        [Extent1].[State] AS [State], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Users] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:01:17,676 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:01:17,676 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:01:17,676 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:01:17 +08:00
+
+2018-04-25 16:01:17,682 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 5 ms with result: SqlDataReader
+
+2018-04-25 16:01:17,682 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:01:17,682 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:01:17 +08:00
+
+2018-04-25 16:01:17,683 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:01:17 +08:00
+
+2018-04-25 16:01:17,684 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[UserName] AS [UserName], 
+    [Project1].[TrueName] AS [TrueName], 
+    [Project1].[PasswordSalt] AS [PasswordSalt], 
+    [Project1].[PasswordHash] AS [PasswordHash], 
+    [Project1].[Sex] AS [Sex], 
+    [Project1].[BirthDay] AS [BirthDay], 
+    [Project1].[CardId] AS [CardId], 
+    [Project1].[EnglishLevel] AS [EnglishLevel], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[Contact] AS [Contact], 
+    [Project1].[LoginTimes] AS [LoginTimes], 
+    [Project1].[LastDateTime] AS [LastDateTime], 
+    [Project1].[ExamScore] AS [ExamScore], 
+    [Project1].[WorkPostId] AS [WorkPostId], 
+    [Project1].[State] AS [State], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[UserName] AS [UserName], 
+        [Extent1].[TrueName] AS [TrueName], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[Sex] AS [Sex], 
+        [Extent1].[BirthDay] AS [BirthDay], 
+        [Extent1].[CardId] AS [CardId], 
+        [Extent1].[EnglishLevel] AS [EnglishLevel], 
+        [Extent1].[Email] AS [Email], 
+        [Extent1].[Contact] AS [Contact], 
+        [Extent1].[LoginTimes] AS [LoginTimes], 
+        [Extent1].[LastDateTime] AS [LastDateTime], 
+        [Extent1].[ExamScore] AS [ExamScore], 
+        [Extent1].[WorkPostId] AS [WorkPostId], 
+        [Extent1].[State] AS [State], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Users] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:01:17,684 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:01:17,684 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:01:17,684 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:01:17 +08:00
+
+2018-04-25 16:01:17,688 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 3 ms with result: SqlDataReader
+
+2018-04-25 16:01:17,688 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:01:17,688 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:01:17 +08:00
+
+2018-04-25 16:01:17,689 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:01:17 +08:00
+
+2018-04-25 16:01:17,689 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Project1].[WorkPostId] AS [WorkPostId]
+    FROM ( SELECT 
+        [Extent1].[WorkPostId] AS [WorkPostId], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime]
+        FROM [dbo].[T_StudentWorkPosts] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[UserId] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:01:17,689 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:01:17,689 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:01:17,689 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:01:17 +08:00
+
+2018-04-25 16:01:17,692 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2018-04-25 16:01:17,692 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:01:17,692 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:01:17 +08:00
+
+2018-04-25 16:01:25,302 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:01:25 +08:00
+
+2018-04-25 16:01:25,302 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[UserName] AS [UserName], 
+    [Project1].[TrueName] AS [TrueName], 
+    [Project1].[PasswordSalt] AS [PasswordSalt], 
+    [Project1].[PasswordHash] AS [PasswordHash], 
+    [Project1].[Sex] AS [Sex], 
+    [Project1].[BirthDay] AS [BirthDay], 
+    [Project1].[CardId] AS [CardId], 
+    [Project1].[EnglishLevel] AS [EnglishLevel], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[Contact] AS [Contact], 
+    [Project1].[LoginTimes] AS [LoginTimes], 
+    [Project1].[LastDateTime] AS [LastDateTime], 
+    [Project1].[ExamScore] AS [ExamScore], 
+    [Project1].[WorkPostId] AS [WorkPostId], 
+    [Project1].[State] AS [State], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[UserName] AS [UserName], 
+        [Extent1].[TrueName] AS [TrueName], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[Sex] AS [Sex], 
+        [Extent1].[BirthDay] AS [BirthDay], 
+        [Extent1].[CardId] AS [CardId], 
+        [Extent1].[EnglishLevel] AS [EnglishLevel], 
+        [Extent1].[Email] AS [Email], 
+        [Extent1].[Contact] AS [Contact], 
+        [Extent1].[LoginTimes] AS [LoginTimes], 
+        [Extent1].[LastDateTime] AS [LastDateTime], 
+        [Extent1].[ExamScore] AS [ExamScore], 
+        [Extent1].[WorkPostId] AS [WorkPostId], 
+        [Extent1].[State] AS [State], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Users] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:01:25,302 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:01:25,302 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:01:25,302 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:01:25 +08:00
+
+2018-04-25 16:01:25,303 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2018-04-25 16:01:25,303 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:01:25,303 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:01:25 +08:00
+
+2018-04-25 16:01:25,304 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:01:25 +08:00
+
+2018-04-25 16:01:25,305 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[UserName] AS [UserName], 
+    [Project1].[TrueName] AS [TrueName], 
+    [Project1].[PasswordSalt] AS [PasswordSalt], 
+    [Project1].[PasswordHash] AS [PasswordHash], 
+    [Project1].[Sex] AS [Sex], 
+    [Project1].[BirthDay] AS [BirthDay], 
+    [Project1].[CardId] AS [CardId], 
+    [Project1].[EnglishLevel] AS [EnglishLevel], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[Contact] AS [Contact], 
+    [Project1].[LoginTimes] AS [LoginTimes], 
+    [Project1].[LastDateTime] AS [LastDateTime], 
+    [Project1].[ExamScore] AS [ExamScore], 
+    [Project1].[WorkPostId] AS [WorkPostId], 
+    [Project1].[State] AS [State], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[UserName] AS [UserName], 
+        [Extent1].[TrueName] AS [TrueName], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[Sex] AS [Sex], 
+        [Extent1].[BirthDay] AS [BirthDay], 
+        [Extent1].[CardId] AS [CardId], 
+        [Extent1].[EnglishLevel] AS [EnglishLevel], 
+        [Extent1].[Email] AS [Email], 
+        [Extent1].[Contact] AS [Contact], 
+        [Extent1].[LoginTimes] AS [LoginTimes], 
+        [Extent1].[LastDateTime] AS [LastDateTime], 
+        [Extent1].[ExamScore] AS [ExamScore], 
+        [Extent1].[WorkPostId] AS [WorkPostId], 
+        [Extent1].[State] AS [State], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Users] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:01:25,305 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:01:25,305 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:01:25,305 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:01:25 +08:00
+
+2018-04-25 16:01:25,306 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2018-04-25 16:01:25,306 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:01:25,306 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:01:25 +08:00
+
+2018-04-25 16:01:25,306 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:01:25 +08:00
+
+2018-04-25 16:01:25,307 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Project1].[WorkPostId] AS [WorkPostId]
+    FROM ( SELECT 
+        [Extent1].[WorkPostId] AS [WorkPostId], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime]
+        FROM [dbo].[T_StudentWorkPosts] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[UserId] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:01:25,307 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:01:25,307 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:01:25,307 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:01:25 +08:00
+
+2018-04-25 16:01:25,308 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2018-04-25 16:01:25,308 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:01:25,308 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:01:25 +08:00
+
+2018-04-25 16:02:15,991 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:15 +08:00
+
+2018-04-25 16:02:15,991 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[UserName] AS [UserName], 
+    [Project1].[TrueName] AS [TrueName], 
+    [Project1].[PasswordSalt] AS [PasswordSalt], 
+    [Project1].[PasswordHash] AS [PasswordHash], 
+    [Project1].[Sex] AS [Sex], 
+    [Project1].[BirthDay] AS [BirthDay], 
+    [Project1].[CardId] AS [CardId], 
+    [Project1].[EnglishLevel] AS [EnglishLevel], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[Contact] AS [Contact], 
+    [Project1].[LoginTimes] AS [LoginTimes], 
+    [Project1].[LastDateTime] AS [LastDateTime], 
+    [Project1].[ExamScore] AS [ExamScore], 
+    [Project1].[WorkPostId] AS [WorkPostId], 
+    [Project1].[State] AS [State], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[UserName] AS [UserName], 
+        [Extent1].[TrueName] AS [TrueName], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[Sex] AS [Sex], 
+        [Extent1].[BirthDay] AS [BirthDay], 
+        [Extent1].[CardId] AS [CardId], 
+        [Extent1].[EnglishLevel] AS [EnglishLevel], 
+        [Extent1].[Email] AS [Email], 
+        [Extent1].[Contact] AS [Contact], 
+        [Extent1].[LoginTimes] AS [LoginTimes], 
+        [Extent1].[LastDateTime] AS [LastDateTime], 
+        [Extent1].[ExamScore] AS [ExamScore], 
+        [Extent1].[WorkPostId] AS [WorkPostId], 
+        [Extent1].[State] AS [State], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Users] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:15,992 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:15,992 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:15,992 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:15 +08:00
+
+2018-04-25 16:02:15,995 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 3 ms with result: SqlDataReader
+
+2018-04-25 16:02:15,995 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:15,996 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:15 +08:00
+
+2018-04-25 16:02:15,996 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:15 +08:00
+
+2018-04-25 16:02:15,997 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[UserName] AS [UserName], 
+    [Project1].[TrueName] AS [TrueName], 
+    [Project1].[PasswordSalt] AS [PasswordSalt], 
+    [Project1].[PasswordHash] AS [PasswordHash], 
+    [Project1].[Sex] AS [Sex], 
+    [Project1].[BirthDay] AS [BirthDay], 
+    [Project1].[CardId] AS [CardId], 
+    [Project1].[EnglishLevel] AS [EnglishLevel], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[Contact] AS [Contact], 
+    [Project1].[LoginTimes] AS [LoginTimes], 
+    [Project1].[LastDateTime] AS [LastDateTime], 
+    [Project1].[ExamScore] AS [ExamScore], 
+    [Project1].[WorkPostId] AS [WorkPostId], 
+    [Project1].[State] AS [State], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[UserName] AS [UserName], 
+        [Extent1].[TrueName] AS [TrueName], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[Sex] AS [Sex], 
+        [Extent1].[BirthDay] AS [BirthDay], 
+        [Extent1].[CardId] AS [CardId], 
+        [Extent1].[EnglishLevel] AS [EnglishLevel], 
+        [Extent1].[Email] AS [Email], 
+        [Extent1].[Contact] AS [Contact], 
+        [Extent1].[LoginTimes] AS [LoginTimes], 
+        [Extent1].[LastDateTime] AS [LastDateTime], 
+        [Extent1].[ExamScore] AS [ExamScore], 
+        [Extent1].[WorkPostId] AS [WorkPostId], 
+        [Extent1].[State] AS [State], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Users] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:15,997 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:15,997 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:15,997 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:15 +08:00
+
+2018-04-25 16:02:15,998 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2018-04-25 16:02:15,998 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:15,998 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:15 +08:00
+
+2018-04-25 16:02:15,999 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:15 +08:00
+
+2018-04-25 16:02:15,999 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[UserName] AS [UserName], 
+    [Project1].[TrueName] AS [TrueName], 
+    [Project1].[PasswordSalt] AS [PasswordSalt], 
+    [Project1].[PasswordHash] AS [PasswordHash], 
+    [Project1].[Sex] AS [Sex], 
+    [Project1].[BirthDay] AS [BirthDay], 
+    [Project1].[CardId] AS [CardId], 
+    [Project1].[EnglishLevel] AS [EnglishLevel], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[Contact] AS [Contact], 
+    [Project1].[LoginTimes] AS [LoginTimes], 
+    [Project1].[LastDateTime] AS [LastDateTime], 
+    [Project1].[ExamScore] AS [ExamScore], 
+    [Project1].[WorkPostId] AS [WorkPostId], 
+    [Project1].[State] AS [State], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[UserName] AS [UserName], 
+        [Extent1].[TrueName] AS [TrueName], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[Sex] AS [Sex], 
+        [Extent1].[BirthDay] AS [BirthDay], 
+        [Extent1].[CardId] AS [CardId], 
+        [Extent1].[EnglishLevel] AS [EnglishLevel], 
+        [Extent1].[Email] AS [Email], 
+        [Extent1].[Contact] AS [Contact], 
+        [Extent1].[LoginTimes] AS [LoginTimes], 
+        [Extent1].[LastDateTime] AS [LastDateTime], 
+        [Extent1].[ExamScore] AS [ExamScore], 
+        [Extent1].[WorkPostId] AS [WorkPostId], 
+        [Extent1].[State] AS [State], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Users] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:15,999 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:15,999 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:15,999 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:15 +08:00
+
+2018-04-25 16:02:16,000 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2018-04-25 16:02:16,000 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:16,000 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:16 +08:00
+
+2018-04-25 16:02:17,456 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:17 +08:00
+
+2018-04-25 16:02:17,457 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[UserName] AS [UserName], 
+    [Project1].[TrueName] AS [TrueName], 
+    [Project1].[PasswordSalt] AS [PasswordSalt], 
+    [Project1].[PasswordHash] AS [PasswordHash], 
+    [Project1].[Sex] AS [Sex], 
+    [Project1].[BirthDay] AS [BirthDay], 
+    [Project1].[CardId] AS [CardId], 
+    [Project1].[EnglishLevel] AS [EnglishLevel], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[Contact] AS [Contact], 
+    [Project1].[LoginTimes] AS [LoginTimes], 
+    [Project1].[LastDateTime] AS [LastDateTime], 
+    [Project1].[ExamScore] AS [ExamScore], 
+    [Project1].[WorkPostId] AS [WorkPostId], 
+    [Project1].[State] AS [State], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[UserName] AS [UserName], 
+        [Extent1].[TrueName] AS [TrueName], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[Sex] AS [Sex], 
+        [Extent1].[BirthDay] AS [BirthDay], 
+        [Extent1].[CardId] AS [CardId], 
+        [Extent1].[EnglishLevel] AS [EnglishLevel], 
+        [Extent1].[Email] AS [Email], 
+        [Extent1].[Contact] AS [Contact], 
+        [Extent1].[LoginTimes] AS [LoginTimes], 
+        [Extent1].[LastDateTime] AS [LastDateTime], 
+        [Extent1].[ExamScore] AS [ExamScore], 
+        [Extent1].[WorkPostId] AS [WorkPostId], 
+        [Extent1].[State] AS [State], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Users] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:17,457 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:17,457 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:17,457 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:17 +08:00
+
+2018-04-25 16:02:17,463 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 5 ms with result: SqlDataReader
+
+2018-04-25 16:02:17,463 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:17,463 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:17 +08:00
+
+2018-04-25 16:02:17,466 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:17 +08:00
+
+2018-04-25 16:02:17,482 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[enTitle] AS [enTitle], 
+    [Extent1].[SubTitle] AS [SubTitle], 
+    [Extent1].[Remark] AS [Remark], 
+    [Extent1].[PicUrl] AS [PicUrl], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Projects] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+    ORDER BY [Extent1].[CreateDateTime] DESC
+2018-04-25 16:02:17,482 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:17,482 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:17 +08:00
+
+2018-04-25 16:02:17,496 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 13 ms with result: SqlDataReader
+
+2018-04-25 16:02:17,496 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:17,499 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:17 +08:00
+
+2018-04-25 16:02:20,513 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:20 +08:00
+
+2018-04-25 16:02:20,513 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[UserName] AS [UserName], 
+    [Project1].[TrueName] AS [TrueName], 
+    [Project1].[PasswordSalt] AS [PasswordSalt], 
+    [Project1].[PasswordHash] AS [PasswordHash], 
+    [Project1].[Sex] AS [Sex], 
+    [Project1].[BirthDay] AS [BirthDay], 
+    [Project1].[CardId] AS [CardId], 
+    [Project1].[EnglishLevel] AS [EnglishLevel], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[Contact] AS [Contact], 
+    [Project1].[LoginTimes] AS [LoginTimes], 
+    [Project1].[LastDateTime] AS [LastDateTime], 
+    [Project1].[ExamScore] AS [ExamScore], 
+    [Project1].[WorkPostId] AS [WorkPostId], 
+    [Project1].[State] AS [State], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[UserName] AS [UserName], 
+        [Extent1].[TrueName] AS [TrueName], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[Sex] AS [Sex], 
+        [Extent1].[BirthDay] AS [BirthDay], 
+        [Extent1].[CardId] AS [CardId], 
+        [Extent1].[EnglishLevel] AS [EnglishLevel], 
+        [Extent1].[Email] AS [Email], 
+        [Extent1].[Contact] AS [Contact], 
+        [Extent1].[LoginTimes] AS [LoginTimes], 
+        [Extent1].[LastDateTime] AS [LastDateTime], 
+        [Extent1].[ExamScore] AS [ExamScore], 
+        [Extent1].[WorkPostId] AS [WorkPostId], 
+        [Extent1].[State] AS [State], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Users] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:20,513 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:20,514 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:20,514 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:20 +08:00
+
+2018-04-25 16:02:20,525 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 11 ms with result: SqlDataReader
+
+2018-04-25 16:02:20,525 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:20,525 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:20 +08:00
+
+2018-04-25 16:02:20,526 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:20 +08:00
+
+2018-04-25 16:02:20,526 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[UserName] AS [UserName], 
+    [Project1].[TrueName] AS [TrueName], 
+    [Project1].[PasswordSalt] AS [PasswordSalt], 
+    [Project1].[PasswordHash] AS [PasswordHash], 
+    [Project1].[Sex] AS [Sex], 
+    [Project1].[BirthDay] AS [BirthDay], 
+    [Project1].[CardId] AS [CardId], 
+    [Project1].[EnglishLevel] AS [EnglishLevel], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[Contact] AS [Contact], 
+    [Project1].[LoginTimes] AS [LoginTimes], 
+    [Project1].[LastDateTime] AS [LastDateTime], 
+    [Project1].[ExamScore] AS [ExamScore], 
+    [Project1].[WorkPostId] AS [WorkPostId], 
+    [Project1].[State] AS [State], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[UserName] AS [UserName], 
+        [Extent1].[TrueName] AS [TrueName], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[Sex] AS [Sex], 
+        [Extent1].[BirthDay] AS [BirthDay], 
+        [Extent1].[CardId] AS [CardId], 
+        [Extent1].[EnglishLevel] AS [EnglishLevel], 
+        [Extent1].[Email] AS [Email], 
+        [Extent1].[Contact] AS [Contact], 
+        [Extent1].[LoginTimes] AS [LoginTimes], 
+        [Extent1].[LastDateTime] AS [LastDateTime], 
+        [Extent1].[ExamScore] AS [ExamScore], 
+        [Extent1].[WorkPostId] AS [WorkPostId], 
+        [Extent1].[State] AS [State], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Users] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:20,526 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:20,526 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:20,526 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:20 +08:00
+
+2018-04-25 16:02:20,529 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2018-04-25 16:02:20,529 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:20,529 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:20 +08:00
+
+2018-04-25 16:02:22,072 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:22 +08:00
+
+2018-04-25 16:02:22,073 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[UserName] AS [UserName], 
+    [Project1].[TrueName] AS [TrueName], 
+    [Project1].[PasswordSalt] AS [PasswordSalt], 
+    [Project1].[PasswordHash] AS [PasswordHash], 
+    [Project1].[Sex] AS [Sex], 
+    [Project1].[BirthDay] AS [BirthDay], 
+    [Project1].[CardId] AS [CardId], 
+    [Project1].[EnglishLevel] AS [EnglishLevel], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[Contact] AS [Contact], 
+    [Project1].[LoginTimes] AS [LoginTimes], 
+    [Project1].[LastDateTime] AS [LastDateTime], 
+    [Project1].[ExamScore] AS [ExamScore], 
+    [Project1].[WorkPostId] AS [WorkPostId], 
+    [Project1].[State] AS [State], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[UserName] AS [UserName], 
+        [Extent1].[TrueName] AS [TrueName], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[Sex] AS [Sex], 
+        [Extent1].[BirthDay] AS [BirthDay], 
+        [Extent1].[CardId] AS [CardId], 
+        [Extent1].[EnglishLevel] AS [EnglishLevel], 
+        [Extent1].[Email] AS [Email], 
+        [Extent1].[Contact] AS [Contact], 
+        [Extent1].[LoginTimes] AS [LoginTimes], 
+        [Extent1].[LastDateTime] AS [LastDateTime], 
+        [Extent1].[ExamScore] AS [ExamScore], 
+        [Extent1].[WorkPostId] AS [WorkPostId], 
+        [Extent1].[State] AS [State], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Users] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:22,073 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:22,073 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:22,073 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:22 +08:00
+
+2018-04-25 16:02:22,087 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 14 ms with result: SqlDataReader
+
+2018-04-25 16:02:22,087 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:22,087 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:22 +08:00
+
+2018-04-25 16:02:22,088 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:22 +08:00
+
+2018-04-25 16:02:22,088 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[enTitle] AS [enTitle], 
+    [Extent1].[SubTitle] AS [SubTitle], 
+    [Extent1].[Remark] AS [Remark], 
+    [Extent1].[PicUrl] AS [PicUrl], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Projects] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+    ORDER BY [Extent1].[CreateDateTime] DESC
+2018-04-25 16:02:22,088 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:22,088 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:22 +08:00
+
+2018-04-25 16:02:22,105 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 16 ms with result: SqlDataReader
+
+2018-04-25 16:02:22,105 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:22,105 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:22 +08:00
+
+2018-04-25 16:02:26,069 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:26 +08:00
+
+2018-04-25 16:02:26,076 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：Started transaction at 2018/4/25 16:02:26 +08:00
+
+2018-04-25 16:02:26,271 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：INSERT [dbo].[T_ProjectBMs]([UserId], [ProjectId], [CreateDateTime], [IsDeleted])
+VALUES (@0, @1, @2, @3)
+SELECT [Id]
+FROM [dbo].[T_ProjectBMs]
+WHERE @@ROWCOUNT > 0 AND [Id] = scope_identity()
+2018-04-25 16:02:26,271 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:26,271 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- @0: '1007' (Type = Int32)
+
+2018-04-25 16:02:26,271 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- @1: '4' (Type = Int32)
+
+2018-04-25 16:02:26,271 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- @2: '2018/4/25 16:02:25' (Type = DateTime2)
+
+2018-04-25 16:02:26,271 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- @3: 'False' (Type = Boolean)
+
+2018-04-25 16:02:26,271 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:26 +08:00
+
+2018-04-25 16:02:26,290 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 18 ms with result: SqlDataReader
+
+2018-04-25 16:02:26,290 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:26,310 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：Committed transaction at 2018/4/25 16:02:26 +08:00
+
+2018-04-25 16:02:26,311 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:26 +08:00
+
+2018-04-25 16:02:26,322 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:26 +08:00
+
+2018-04-25 16:02:26,322 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[UserName] AS [UserName], 
+    [Project1].[TrueName] AS [TrueName], 
+    [Project1].[PasswordSalt] AS [PasswordSalt], 
+    [Project1].[PasswordHash] AS [PasswordHash], 
+    [Project1].[Sex] AS [Sex], 
+    [Project1].[BirthDay] AS [BirthDay], 
+    [Project1].[CardId] AS [CardId], 
+    [Project1].[EnglishLevel] AS [EnglishLevel], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[Contact] AS [Contact], 
+    [Project1].[LoginTimes] AS [LoginTimes], 
+    [Project1].[LastDateTime] AS [LastDateTime], 
+    [Project1].[ExamScore] AS [ExamScore], 
+    [Project1].[WorkPostId] AS [WorkPostId], 
+    [Project1].[State] AS [State], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[UserName] AS [UserName], 
+        [Extent1].[TrueName] AS [TrueName], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[Sex] AS [Sex], 
+        [Extent1].[BirthDay] AS [BirthDay], 
+        [Extent1].[CardId] AS [CardId], 
+        [Extent1].[EnglishLevel] AS [EnglishLevel], 
+        [Extent1].[Email] AS [Email], 
+        [Extent1].[Contact] AS [Contact], 
+        [Extent1].[LoginTimes] AS [LoginTimes], 
+        [Extent1].[LastDateTime] AS [LastDateTime], 
+        [Extent1].[ExamScore] AS [ExamScore], 
+        [Extent1].[WorkPostId] AS [WorkPostId], 
+        [Extent1].[State] AS [State], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Users] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:26,322 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:26,322 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:26,322 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:26 +08:00
+
+2018-04-25 16:02:26,323 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2018-04-25 16:02:26,323 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:26,323 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:26 +08:00
+
+2018-04-25 16:02:26,349 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:26 +08:00
+
+2018-04-25 16:02:26,349 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：Started transaction at 2018/4/25 16:02:26 +08:00
+
+2018-04-25 16:02:26,361 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：UPDATE [dbo].[T_Users]
+SET [State] = @0
+WHERE ([Id] = @1)
+
+2018-04-25 16:02:26,362 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- @0: '2' (Type = Int32)
+
+2018-04-25 16:02:26,362 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- @1: '1007' (Type = Int32)
+
+2018-04-25 16:02:26,362 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:26 +08:00
+
+2018-04-25 16:02:26,366 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: 1
+
+2018-04-25 16:02:26,366 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:26,366 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：Committed transaction at 2018/4/25 16:02:26 +08:00
+
+2018-04-25 16:02:26,366 [13] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:26 +08:00
+
+2018-04-25 16:02:27,536 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,537 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[UserName] AS [UserName], 
+    [Project1].[TrueName] AS [TrueName], 
+    [Project1].[PasswordSalt] AS [PasswordSalt], 
+    [Project1].[PasswordHash] AS [PasswordHash], 
+    [Project1].[Sex] AS [Sex], 
+    [Project1].[BirthDay] AS [BirthDay], 
+    [Project1].[CardId] AS [CardId], 
+    [Project1].[EnglishLevel] AS [EnglishLevel], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[Contact] AS [Contact], 
+    [Project1].[LoginTimes] AS [LoginTimes], 
+    [Project1].[LastDateTime] AS [LastDateTime], 
+    [Project1].[ExamScore] AS [ExamScore], 
+    [Project1].[WorkPostId] AS [WorkPostId], 
+    [Project1].[State] AS [State], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[UserName] AS [UserName], 
+        [Extent1].[TrueName] AS [TrueName], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[Sex] AS [Sex], 
+        [Extent1].[BirthDay] AS [BirthDay], 
+        [Extent1].[CardId] AS [CardId], 
+        [Extent1].[EnglishLevel] AS [EnglishLevel], 
+        [Extent1].[Email] AS [Email], 
+        [Extent1].[Contact] AS [Contact], 
+        [Extent1].[LoginTimes] AS [LoginTimes], 
+        [Extent1].[LastDateTime] AS [LastDateTime], 
+        [Extent1].[ExamScore] AS [ExamScore], 
+        [Extent1].[WorkPostId] AS [WorkPostId], 
+        [Extent1].[State] AS [State], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Users] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:27,537 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:27,537 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:27,537 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,543 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 5 ms with result: SqlDataReader
+
+2018-04-25 16:02:27,543 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:27,543 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,546 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,561 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[PCount] AS [PCount], 
+    [Extent1].[PScore] AS [PScore], 
+    [Extent1].[ExamTime] AS [ExamTime], 
+    [Extent1].[ZScore] AS [ZScore], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Papers] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+    ORDER BY [Extent1].[CreateDateTime] DESC
+2018-04-25 16:02:27,561 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:27,561 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,565 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 3 ms with result: SqlDataReader
+
+2018-04-25 16:02:27,565 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:27,568 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,570 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,570 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[PCount] AS [PCount], 
+    [Extent1].[PScore] AS [PScore], 
+    [Extent1].[ExamTime] AS [ExamTime], 
+    [Extent1].[ZScore] AS [ZScore], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Papers] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+    ORDER BY [Extent1].[CreateDateTime] DESC
+2018-04-25 16:02:27,570 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:27,570 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,571 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2018-04-25 16:02:27,571 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:27,571 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,575 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,599 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[UserId] AS [UserId], 
+    [Project1].[PaperId] AS [PaperId], 
+    [Project1].[BankId] AS [BankId], 
+    [Project1].[Answer] AS [Answer], 
+    [Project1].[Score] AS [Score], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[UserId] AS [UserId], 
+        [Extent1].[PaperId] AS [PaperId], 
+        [Extent1].[BankId] AS [BankId], 
+        [Extent1].[Answer] AS [Answer], 
+        [Extent1].[Score] AS [Score], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_StuPapers] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[PaperId] = @p__linq__0) AND ([Extent1].[UserId] = @p__linq__1)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:27,599 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:27,599 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '8' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:27,599 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__1: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:27,599 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,603 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 4 ms with result: SqlDataReader
+
+2018-04-25 16:02:27,603 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:27,607 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,608 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,608 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[PCount] AS [PCount], 
+    [Extent1].[PScore] AS [PScore], 
+    [Extent1].[ExamTime] AS [ExamTime], 
+    [Extent1].[ZScore] AS [ZScore], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Papers] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+    ORDER BY [Extent1].[CreateDateTime] DESC
+2018-04-25 16:02:27,608 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:27,608 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,609 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2018-04-25 16:02:27,609 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:27,609 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,626 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,626 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[UserName] AS [UserName], 
+    [Project1].[TrueName] AS [TrueName], 
+    [Project1].[PasswordSalt] AS [PasswordSalt], 
+    [Project1].[PasswordHash] AS [PasswordHash], 
+    [Project1].[Sex] AS [Sex], 
+    [Project1].[BirthDay] AS [BirthDay], 
+    [Project1].[CardId] AS [CardId], 
+    [Project1].[EnglishLevel] AS [EnglishLevel], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[Contact] AS [Contact], 
+    [Project1].[LoginTimes] AS [LoginTimes], 
+    [Project1].[LastDateTime] AS [LastDateTime], 
+    [Project1].[ExamScore] AS [ExamScore], 
+    [Project1].[WorkPostId] AS [WorkPostId], 
+    [Project1].[State] AS [State], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[UserName] AS [UserName], 
+        [Extent1].[TrueName] AS [TrueName], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[Sex] AS [Sex], 
+        [Extent1].[BirthDay] AS [BirthDay], 
+        [Extent1].[CardId] AS [CardId], 
+        [Extent1].[EnglishLevel] AS [EnglishLevel], 
+        [Extent1].[Email] AS [Email], 
+        [Extent1].[Contact] AS [Contact], 
+        [Extent1].[LoginTimes] AS [LoginTimes], 
+        [Extent1].[LastDateTime] AS [LastDateTime], 
+        [Extent1].[ExamScore] AS [ExamScore], 
+        [Extent1].[WorkPostId] AS [WorkPostId], 
+        [Extent1].[State] AS [State], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Users] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:27,626 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:27,626 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:27,626 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,627 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2018-04-25 16:02:27,627 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:27,627 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,629 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,637 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_BankClass] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+    ORDER BY [Extent1].[CreateDateTime] DESC
+2018-04-25 16:02:27,637 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:27,637 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,640 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2018-04-25 16:02:27,640 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:27,641 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,645 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,668 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Subject] AS [Subject], 
+    [Project1].[ClassId] AS [ClassId], 
+    [Project1].[ItemA] AS [ItemA], 
+    [Project1].[ItemB] AS [ItemB], 
+    [Project1].[ItemC] AS [ItemC], 
+    [Project1].[ItemD] AS [ItemD], 
+    [Project1].[ItemE] AS [ItemE], 
+    [Project1].[Answer] AS [Answer], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Subject] AS [Subject], 
+        [Extent1].[ClassId] AS [ClassId], 
+        [Extent1].[ItemA] AS [ItemA], 
+        [Extent1].[ItemB] AS [ItemB], 
+        [Extent1].[ItemC] AS [ItemC], 
+        [Extent1].[ItemD] AS [ItemD], 
+        [Extent1].[ItemE] AS [ItemE], 
+        [Extent1].[Answer] AS [Answer], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Banks] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ClassId] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:27,668 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:27,668 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:27,668 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,672 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 4 ms with result: SqlDataReader
+
+2018-04-25 16:02:27,672 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:27,677 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,691 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,731 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_BankClass] AS [Extent1]
+    WHERE [Extent1].[Id] = @EntityKeyValue1
+2018-04-25 16:02:27,731 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:27,731 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- EntityKeyValue1: '2' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:27,731 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,733 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2018-04-25 16:02:27,733 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:27,757 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,767 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,769 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[PCount] AS [PCount], 
+    [Project1].[PScore] AS [PScore], 
+    [Project1].[ExamTime] AS [ExamTime], 
+    [Project1].[ZScore] AS [ZScore], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Title] AS [Title], 
+        [Extent1].[PCount] AS [PCount], 
+        [Extent1].[PScore] AS [PScore], 
+        [Extent1].[ExamTime] AS [ExamTime], 
+        [Extent1].[ZScore] AS [ZScore], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Papers] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:27,769 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:27,769 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '8' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:27,769 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,772 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2018-04-25 16:02:27,772 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:27,772 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,774 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,775 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Subject] AS [Subject], 
+    [Project1].[ClassId] AS [ClassId], 
+    [Project1].[ItemA] AS [ItemA], 
+    [Project1].[ItemB] AS [ItemB], 
+    [Project1].[ItemC] AS [ItemC], 
+    [Project1].[ItemD] AS [ItemD], 
+    [Project1].[ItemE] AS [ItemE], 
+    [Project1].[Answer] AS [Answer], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Subject] AS [Subject], 
+        [Extent1].[ClassId] AS [ClassId], 
+        [Extent1].[ItemA] AS [ItemA], 
+        [Extent1].[ItemB] AS [ItemB], 
+        [Extent1].[ItemC] AS [ItemC], 
+        [Extent1].[ItemD] AS [ItemD], 
+        [Extent1].[ItemE] AS [ItemE], 
+        [Extent1].[Answer] AS [Answer], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Banks] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ClassId] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:27,775 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:27,775 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:27,775 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,776 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2018-04-25 16:02:27,776 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:27,776 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,777 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,777 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_BankClass] AS [Extent1]
+    WHERE [Extent1].[Id] = @EntityKeyValue1
+2018-04-25 16:02:27,777 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:27,777 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- EntityKeyValue1: '1' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:27,777 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,778 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2018-04-25 16:02:27,778 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:27,779 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,779 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,780 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[PCount] AS [PCount], 
+    [Project1].[PScore] AS [PScore], 
+    [Project1].[ExamTime] AS [ExamTime], 
+    [Project1].[ZScore] AS [ZScore], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Title] AS [Title], 
+        [Extent1].[PCount] AS [PCount], 
+        [Extent1].[PScore] AS [PScore], 
+        [Extent1].[ExamTime] AS [ExamTime], 
+        [Extent1].[ZScore] AS [ZScore], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Papers] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:27,780 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:27,780 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '8' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:27,780 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:27,781 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 1 ms with result: SqlDataReader
+
+2018-04-25 16:02:27,781 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:27,782 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:27 +08:00
+
+2018-04-25 16:02:33,676 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:33 +08:00
+
+2018-04-25 16:02:33,676 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[UserName] AS [UserName], 
+    [Project1].[TrueName] AS [TrueName], 
+    [Project1].[PasswordSalt] AS [PasswordSalt], 
+    [Project1].[PasswordHash] AS [PasswordHash], 
+    [Project1].[Sex] AS [Sex], 
+    [Project1].[BirthDay] AS [BirthDay], 
+    [Project1].[CardId] AS [CardId], 
+    [Project1].[EnglishLevel] AS [EnglishLevel], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[Contact] AS [Contact], 
+    [Project1].[LoginTimes] AS [LoginTimes], 
+    [Project1].[LastDateTime] AS [LastDateTime], 
+    [Project1].[ExamScore] AS [ExamScore], 
+    [Project1].[WorkPostId] AS [WorkPostId], 
+    [Project1].[State] AS [State], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[UserName] AS [UserName], 
+        [Extent1].[TrueName] AS [TrueName], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[Sex] AS [Sex], 
+        [Extent1].[BirthDay] AS [BirthDay], 
+        [Extent1].[CardId] AS [CardId], 
+        [Extent1].[EnglishLevel] AS [EnglishLevel], 
+        [Extent1].[Email] AS [Email], 
+        [Extent1].[Contact] AS [Contact], 
+        [Extent1].[LoginTimes] AS [LoginTimes], 
+        [Extent1].[LastDateTime] AS [LastDateTime], 
+        [Extent1].[ExamScore] AS [ExamScore], 
+        [Extent1].[WorkPostId] AS [WorkPostId], 
+        [Extent1].[State] AS [State], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Users] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:33,676 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:33,677 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:33,677 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:33 +08:00
+
+2018-04-25 16:02:33,687 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 10 ms with result: SqlDataReader
+
+2018-04-25 16:02:33,687 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:33,687 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:33 +08:00
+
+2018-04-25 16:02:35,657 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,657 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[UserName] AS [UserName], 
+    [Project1].[TrueName] AS [TrueName], 
+    [Project1].[PasswordSalt] AS [PasswordSalt], 
+    [Project1].[PasswordHash] AS [PasswordHash], 
+    [Project1].[Sex] AS [Sex], 
+    [Project1].[BirthDay] AS [BirthDay], 
+    [Project1].[CardId] AS [CardId], 
+    [Project1].[EnglishLevel] AS [EnglishLevel], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[Contact] AS [Contact], 
+    [Project1].[LoginTimes] AS [LoginTimes], 
+    [Project1].[LastDateTime] AS [LastDateTime], 
+    [Project1].[ExamScore] AS [ExamScore], 
+    [Project1].[WorkPostId] AS [WorkPostId], 
+    [Project1].[State] AS [State], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[UserName] AS [UserName], 
+        [Extent1].[TrueName] AS [TrueName], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[Sex] AS [Sex], 
+        [Extent1].[BirthDay] AS [BirthDay], 
+        [Extent1].[CardId] AS [CardId], 
+        [Extent1].[EnglishLevel] AS [EnglishLevel], 
+        [Extent1].[Email] AS [Email], 
+        [Extent1].[Contact] AS [Contact], 
+        [Extent1].[LoginTimes] AS [LoginTimes], 
+        [Extent1].[LastDateTime] AS [LastDateTime], 
+        [Extent1].[ExamScore] AS [ExamScore], 
+        [Extent1].[WorkPostId] AS [WorkPostId], 
+        [Extent1].[State] AS [State], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Users] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:35,657 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:35,657 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:35,657 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,658 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2018-04-25 16:02:35,658 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:35,659 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,659 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,659 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[PCount] AS [PCount], 
+    [Extent1].[PScore] AS [PScore], 
+    [Extent1].[ExamTime] AS [ExamTime], 
+    [Extent1].[ZScore] AS [ZScore], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Papers] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+    ORDER BY [Extent1].[CreateDateTime] DESC
+2018-04-25 16:02:35,659 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:35,660 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,662 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2018-04-25 16:02:35,662 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:35,663 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,663 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,664 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[PCount] AS [PCount], 
+    [Extent1].[PScore] AS [PScore], 
+    [Extent1].[ExamTime] AS [ExamTime], 
+    [Extent1].[ZScore] AS [ZScore], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Papers] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+    ORDER BY [Extent1].[CreateDateTime] DESC
+2018-04-25 16:02:35,664 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:35,664 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,666 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2018-04-25 16:02:35,666 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:35,666 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,668 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,668 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[UserId] AS [UserId], 
+    [Project1].[PaperId] AS [PaperId], 
+    [Project1].[BankId] AS [BankId], 
+    [Project1].[Answer] AS [Answer], 
+    [Project1].[Score] AS [Score], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[UserId] AS [UserId], 
+        [Extent1].[PaperId] AS [PaperId], 
+        [Extent1].[BankId] AS [BankId], 
+        [Extent1].[Answer] AS [Answer], 
+        [Extent1].[Score] AS [Score], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_StuPapers] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[PaperId] = @p__linq__0) AND ([Extent1].[UserId] = @p__linq__1)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:35,668 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:35,668 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '8' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:35,668 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__1: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:35,668 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,671 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2018-04-25 16:02:35,671 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:35,672 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,673 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,673 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[PCount] AS [PCount], 
+    [Extent1].[PScore] AS [PScore], 
+    [Extent1].[ExamTime] AS [ExamTime], 
+    [Extent1].[ZScore] AS [ZScore], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Papers] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+    ORDER BY [Extent1].[CreateDateTime] DESC
+2018-04-25 16:02:35,673 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:35,673 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,679 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 6 ms with result: SqlDataReader
+
+2018-04-25 16:02:35,679 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:35,679 [9] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,693 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,693 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[UserName] AS [UserName], 
+    [Project1].[TrueName] AS [TrueName], 
+    [Project1].[PasswordSalt] AS [PasswordSalt], 
+    [Project1].[PasswordHash] AS [PasswordHash], 
+    [Project1].[Sex] AS [Sex], 
+    [Project1].[BirthDay] AS [BirthDay], 
+    [Project1].[CardId] AS [CardId], 
+    [Project1].[EnglishLevel] AS [EnglishLevel], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[Contact] AS [Contact], 
+    [Project1].[LoginTimes] AS [LoginTimes], 
+    [Project1].[LastDateTime] AS [LastDateTime], 
+    [Project1].[ExamScore] AS [ExamScore], 
+    [Project1].[WorkPostId] AS [WorkPostId], 
+    [Project1].[State] AS [State], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[UserName] AS [UserName], 
+        [Extent1].[TrueName] AS [TrueName], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[Sex] AS [Sex], 
+        [Extent1].[BirthDay] AS [BirthDay], 
+        [Extent1].[CardId] AS [CardId], 
+        [Extent1].[EnglishLevel] AS [EnglishLevel], 
+        [Extent1].[Email] AS [Email], 
+        [Extent1].[Contact] AS [Contact], 
+        [Extent1].[LoginTimes] AS [LoginTimes], 
+        [Extent1].[LastDateTime] AS [LastDateTime], 
+        [Extent1].[ExamScore] AS [ExamScore], 
+        [Extent1].[WorkPostId] AS [WorkPostId], 
+        [Extent1].[State] AS [State], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Users] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:35,693 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:35,693 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:35,693 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,694 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2018-04-25 16:02:35,694 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:35,694 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,695 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,695 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_BankClass] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+    ORDER BY [Extent1].[CreateDateTime] DESC
+2018-04-25 16:02:35,695 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:35,695 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,696 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2018-04-25 16:02:35,696 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:35,696 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,697 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,697 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Subject] AS [Subject], 
+    [Project1].[ClassId] AS [ClassId], 
+    [Project1].[ItemA] AS [ItemA], 
+    [Project1].[ItemB] AS [ItemB], 
+    [Project1].[ItemC] AS [ItemC], 
+    [Project1].[ItemD] AS [ItemD], 
+    [Project1].[ItemE] AS [ItemE], 
+    [Project1].[Answer] AS [Answer], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Subject] AS [Subject], 
+        [Extent1].[ClassId] AS [ClassId], 
+        [Extent1].[ItemA] AS [ItemA], 
+        [Extent1].[ItemB] AS [ItemB], 
+        [Extent1].[ItemC] AS [ItemC], 
+        [Extent1].[ItemD] AS [ItemD], 
+        [Extent1].[ItemE] AS [ItemE], 
+        [Extent1].[Answer] AS [Answer], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Banks] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ClassId] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:35,697 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:35,697 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:35,697 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,698 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2018-04-25 16:02:35,699 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:35,699 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,699 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,699 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_BankClass] AS [Extent1]
+    WHERE [Extent1].[Id] = @EntityKeyValue1
+2018-04-25 16:02:35,699 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:35,699 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- EntityKeyValue1: '2' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:35,699 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,704 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 4 ms with result: SqlDataReader
+
+2018-04-25 16:02:35,704 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:35,704 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,705 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,705 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[PCount] AS [PCount], 
+    [Project1].[PScore] AS [PScore], 
+    [Project1].[ExamTime] AS [ExamTime], 
+    [Project1].[ZScore] AS [ZScore], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Title] AS [Title], 
+        [Extent1].[PCount] AS [PCount], 
+        [Extent1].[PScore] AS [PScore], 
+        [Extent1].[ExamTime] AS [ExamTime], 
+        [Extent1].[ZScore] AS [ZScore], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Papers] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:35,705 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:35,705 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '8' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:35,705 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,706 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2018-04-25 16:02:35,706 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:35,706 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,707 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,707 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Subject] AS [Subject], 
+    [Project1].[ClassId] AS [ClassId], 
+    [Project1].[ItemA] AS [ItemA], 
+    [Project1].[ItemB] AS [ItemB], 
+    [Project1].[ItemC] AS [ItemC], 
+    [Project1].[ItemD] AS [ItemD], 
+    [Project1].[ItemE] AS [ItemE], 
+    [Project1].[Answer] AS [Answer], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Subject] AS [Subject], 
+        [Extent1].[ClassId] AS [ClassId], 
+        [Extent1].[ItemA] AS [ItemA], 
+        [Extent1].[ItemB] AS [ItemB], 
+        [Extent1].[ItemC] AS [ItemC], 
+        [Extent1].[ItemD] AS [ItemD], 
+        [Extent1].[ItemE] AS [ItemE], 
+        [Extent1].[Answer] AS [Answer], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Banks] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ClassId] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:35,707 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:35,707 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:35,707 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,708 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2018-04-25 16:02:35,708 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:35,708 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,708 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,708 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_BankClass] AS [Extent1]
+    WHERE [Extent1].[Id] = @EntityKeyValue1
+2018-04-25 16:02:35,708 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:35,708 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- EntityKeyValue1: '1' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:35,708 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,709 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2018-04-25 16:02:35,709 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:35,709 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,710 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,710 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[PCount] AS [PCount], 
+    [Project1].[PScore] AS [PScore], 
+    [Project1].[ExamTime] AS [ExamTime], 
+    [Project1].[ZScore] AS [ZScore], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Title] AS [Title], 
+        [Extent1].[PCount] AS [PCount], 
+        [Extent1].[PScore] AS [PScore], 
+        [Extent1].[ExamTime] AS [ExamTime], 
+        [Extent1].[ZScore] AS [ZScore], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Papers] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:35,710 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:35,710 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '8' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:35,710 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:35,711 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2018-04-25 16:02:35,711 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:35,711 [7] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:35 +08:00
+
+2018-04-25 16:02:37,720 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:37 +08:00
+
+2018-04-25 16:02:37,721 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[UserName] AS [UserName], 
+    [Project1].[TrueName] AS [TrueName], 
+    [Project1].[PasswordSalt] AS [PasswordSalt], 
+    [Project1].[PasswordHash] AS [PasswordHash], 
+    [Project1].[Sex] AS [Sex], 
+    [Project1].[BirthDay] AS [BirthDay], 
+    [Project1].[CardId] AS [CardId], 
+    [Project1].[EnglishLevel] AS [EnglishLevel], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[Contact] AS [Contact], 
+    [Project1].[LoginTimes] AS [LoginTimes], 
+    [Project1].[LastDateTime] AS [LastDateTime], 
+    [Project1].[ExamScore] AS [ExamScore], 
+    [Project1].[WorkPostId] AS [WorkPostId], 
+    [Project1].[State] AS [State], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[UserName] AS [UserName], 
+        [Extent1].[TrueName] AS [TrueName], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[Sex] AS [Sex], 
+        [Extent1].[BirthDay] AS [BirthDay], 
+        [Extent1].[CardId] AS [CardId], 
+        [Extent1].[EnglishLevel] AS [EnglishLevel], 
+        [Extent1].[Email] AS [Email], 
+        [Extent1].[Contact] AS [Contact], 
+        [Extent1].[LoginTimes] AS [LoginTimes], 
+        [Extent1].[LastDateTime] AS [LastDateTime], 
+        [Extent1].[ExamScore] AS [ExamScore], 
+        [Extent1].[WorkPostId] AS [WorkPostId], 
+        [Extent1].[State] AS [State], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Users] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:37,721 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:37,721 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:37,721 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:37 +08:00
+
+2018-04-25 16:02:37,738 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 16 ms with result: SqlDataReader
+
+2018-04-25 16:02:37,738 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:37,738 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:37 +08:00
+
+2018-04-25 16:02:42,512 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:42 +08:00
+
+2018-04-25 16:02:42,513 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[UserName] AS [UserName], 
+    [Project1].[TrueName] AS [TrueName], 
+    [Project1].[PasswordSalt] AS [PasswordSalt], 
+    [Project1].[PasswordHash] AS [PasswordHash], 
+    [Project1].[Sex] AS [Sex], 
+    [Project1].[BirthDay] AS [BirthDay], 
+    [Project1].[CardId] AS [CardId], 
+    [Project1].[EnglishLevel] AS [EnglishLevel], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[Contact] AS [Contact], 
+    [Project1].[LoginTimes] AS [LoginTimes], 
+    [Project1].[LastDateTime] AS [LastDateTime], 
+    [Project1].[ExamScore] AS [ExamScore], 
+    [Project1].[WorkPostId] AS [WorkPostId], 
+    [Project1].[State] AS [State], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[UserName] AS [UserName], 
+        [Extent1].[TrueName] AS [TrueName], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[Sex] AS [Sex], 
+        [Extent1].[BirthDay] AS [BirthDay], 
+        [Extent1].[CardId] AS [CardId], 
+        [Extent1].[EnglishLevel] AS [EnglishLevel], 
+        [Extent1].[Email] AS [Email], 
+        [Extent1].[Contact] AS [Contact], 
+        [Extent1].[LoginTimes] AS [LoginTimes], 
+        [Extent1].[LastDateTime] AS [LastDateTime], 
+        [Extent1].[ExamScore] AS [ExamScore], 
+        [Extent1].[WorkPostId] AS [WorkPostId], 
+        [Extent1].[State] AS [State], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Users] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:42,513 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:42,513 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:42,513 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:42 +08:00
+
+2018-04-25 16:02:42,516 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2018-04-25 16:02:42,516 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:42,516 [12] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:42 +08:00
+
+2018-04-25 16:02:44,551 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,551 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[UserName] AS [UserName], 
+    [Project1].[TrueName] AS [TrueName], 
+    [Project1].[PasswordSalt] AS [PasswordSalt], 
+    [Project1].[PasswordHash] AS [PasswordHash], 
+    [Project1].[Sex] AS [Sex], 
+    [Project1].[BirthDay] AS [BirthDay], 
+    [Project1].[CardId] AS [CardId], 
+    [Project1].[EnglishLevel] AS [EnglishLevel], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[Contact] AS [Contact], 
+    [Project1].[LoginTimes] AS [LoginTimes], 
+    [Project1].[LastDateTime] AS [LastDateTime], 
+    [Project1].[ExamScore] AS [ExamScore], 
+    [Project1].[WorkPostId] AS [WorkPostId], 
+    [Project1].[State] AS [State], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[UserName] AS [UserName], 
+        [Extent1].[TrueName] AS [TrueName], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[Sex] AS [Sex], 
+        [Extent1].[BirthDay] AS [BirthDay], 
+        [Extent1].[CardId] AS [CardId], 
+        [Extent1].[EnglishLevel] AS [EnglishLevel], 
+        [Extent1].[Email] AS [Email], 
+        [Extent1].[Contact] AS [Contact], 
+        [Extent1].[LoginTimes] AS [LoginTimes], 
+        [Extent1].[LastDateTime] AS [LastDateTime], 
+        [Extent1].[ExamScore] AS [ExamScore], 
+        [Extent1].[WorkPostId] AS [WorkPostId], 
+        [Extent1].[State] AS [State], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Users] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:44,551 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:44,551 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:44,551 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,555 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 3 ms with result: SqlDataReader
+
+2018-04-25 16:02:44,555 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:44,556 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,556 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,556 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[PCount] AS [PCount], 
+    [Extent1].[PScore] AS [PScore], 
+    [Extent1].[ExamTime] AS [ExamTime], 
+    [Extent1].[ZScore] AS [ZScore], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Papers] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+    ORDER BY [Extent1].[CreateDateTime] DESC
+2018-04-25 16:02:44,556 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:44,557 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,558 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 1 ms with result: SqlDataReader
+
+2018-04-25 16:02:44,558 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:44,559 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,559 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,559 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[PCount] AS [PCount], 
+    [Extent1].[PScore] AS [PScore], 
+    [Extent1].[ExamTime] AS [ExamTime], 
+    [Extent1].[ZScore] AS [ZScore], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Papers] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+    ORDER BY [Extent1].[CreateDateTime] DESC
+2018-04-25 16:02:44,559 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:44,559 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,562 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2018-04-25 16:02:44,562 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:44,562 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,563 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,564 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[UserId] AS [UserId], 
+    [Project1].[PaperId] AS [PaperId], 
+    [Project1].[BankId] AS [BankId], 
+    [Project1].[Answer] AS [Answer], 
+    [Project1].[Score] AS [Score], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[UserId] AS [UserId], 
+        [Extent1].[PaperId] AS [PaperId], 
+        [Extent1].[BankId] AS [BankId], 
+        [Extent1].[Answer] AS [Answer], 
+        [Extent1].[Score] AS [Score], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_StuPapers] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[PaperId] = @p__linq__0) AND ([Extent1].[UserId] = @p__linq__1)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:44,564 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:44,564 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '8' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:44,564 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__1: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:44,564 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,568 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 3 ms with result: SqlDataReader
+
+2018-04-25 16:02:44,568 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:44,568 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,569 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,570 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[PCount] AS [PCount], 
+    [Extent1].[PScore] AS [PScore], 
+    [Extent1].[ExamTime] AS [ExamTime], 
+    [Extent1].[ZScore] AS [ZScore], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Papers] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+    ORDER BY [Extent1].[CreateDateTime] DESC
+2018-04-25 16:02:44,570 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:44,570 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,577 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 7 ms with result: SqlDataReader
+
+2018-04-25 16:02:44,577 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:44,577 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,589 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,590 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[UserName] AS [UserName], 
+    [Project1].[TrueName] AS [TrueName], 
+    [Project1].[PasswordSalt] AS [PasswordSalt], 
+    [Project1].[PasswordHash] AS [PasswordHash], 
+    [Project1].[Sex] AS [Sex], 
+    [Project1].[BirthDay] AS [BirthDay], 
+    [Project1].[CardId] AS [CardId], 
+    [Project1].[EnglishLevel] AS [EnglishLevel], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[Contact] AS [Contact], 
+    [Project1].[LoginTimes] AS [LoginTimes], 
+    [Project1].[LastDateTime] AS [LastDateTime], 
+    [Project1].[ExamScore] AS [ExamScore], 
+    [Project1].[WorkPostId] AS [WorkPostId], 
+    [Project1].[State] AS [State], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[UserName] AS [UserName], 
+        [Extent1].[TrueName] AS [TrueName], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[Sex] AS [Sex], 
+        [Extent1].[BirthDay] AS [BirthDay], 
+        [Extent1].[CardId] AS [CardId], 
+        [Extent1].[EnglishLevel] AS [EnglishLevel], 
+        [Extent1].[Email] AS [Email], 
+        [Extent1].[Contact] AS [Contact], 
+        [Extent1].[LoginTimes] AS [LoginTimes], 
+        [Extent1].[LastDateTime] AS [LastDateTime], 
+        [Extent1].[ExamScore] AS [ExamScore], 
+        [Extent1].[WorkPostId] AS [WorkPostId], 
+        [Extent1].[State] AS [State], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Users] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:44,590 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:44,590 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1007' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:44,590 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,590 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2018-04-25 16:02:44,590 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:44,591 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,591 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,591 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_BankClass] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+    ORDER BY [Extent1].[CreateDateTime] DESC
+2018-04-25 16:02:44,591 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:44,591 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,593 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 1 ms with result: SqlDataReader
+
+2018-04-25 16:02:44,593 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:44,594 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,594 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,594 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Subject] AS [Subject], 
+    [Project1].[ClassId] AS [ClassId], 
+    [Project1].[ItemA] AS [ItemA], 
+    [Project1].[ItemB] AS [ItemB], 
+    [Project1].[ItemC] AS [ItemC], 
+    [Project1].[ItemD] AS [ItemD], 
+    [Project1].[ItemE] AS [ItemE], 
+    [Project1].[Answer] AS [Answer], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Subject] AS [Subject], 
+        [Extent1].[ClassId] AS [ClassId], 
+        [Extent1].[ItemA] AS [ItemA], 
+        [Extent1].[ItemB] AS [ItemB], 
+        [Extent1].[ItemC] AS [ItemC], 
+        [Extent1].[ItemD] AS [ItemD], 
+        [Extent1].[ItemE] AS [ItemE], 
+        [Extent1].[Answer] AS [Answer], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Banks] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ClassId] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:44,595 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:44,595 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:44,595 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,596 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 1 ms with result: SqlDataReader
+
+2018-04-25 16:02:44,596 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:44,596 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,596 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,596 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_BankClass] AS [Extent1]
+    WHERE [Extent1].[Id] = @EntityKeyValue1
+2018-04-25 16:02:44,596 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:44,596 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- EntityKeyValue1: '2' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:44,596 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,597 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2018-04-25 16:02:44,597 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:44,598 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,598 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,598 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[PCount] AS [PCount], 
+    [Project1].[PScore] AS [PScore], 
+    [Project1].[ExamTime] AS [ExamTime], 
+    [Project1].[ZScore] AS [ZScore], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Title] AS [Title], 
+        [Extent1].[PCount] AS [PCount], 
+        [Extent1].[PScore] AS [PScore], 
+        [Extent1].[ExamTime] AS [ExamTime], 
+        [Extent1].[ZScore] AS [ZScore], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Papers] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:44,598 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:44,598 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '8' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:44,599 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,599 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2018-04-25 16:02:44,599 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:44,600 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,600 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,601 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Subject] AS [Subject], 
+    [Project1].[ClassId] AS [ClassId], 
+    [Project1].[ItemA] AS [ItemA], 
+    [Project1].[ItemB] AS [ItemB], 
+    [Project1].[ItemC] AS [ItemC], 
+    [Project1].[ItemD] AS [ItemD], 
+    [Project1].[ItemE] AS [ItemE], 
+    [Project1].[Answer] AS [Answer], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Subject] AS [Subject], 
+        [Extent1].[ClassId] AS [ClassId], 
+        [Extent1].[ItemA] AS [ItemA], 
+        [Extent1].[ItemB] AS [ItemB], 
+        [Extent1].[ItemC] AS [ItemC], 
+        [Extent1].[ItemD] AS [ItemD], 
+        [Extent1].[ItemE] AS [ItemE], 
+        [Extent1].[Answer] AS [Answer], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Banks] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ClassId] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:44,601 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:44,601 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:44,601 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,604 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2018-04-25 16:02:44,604 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:44,604 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,604 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,604 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_BankClass] AS [Extent1]
+    WHERE [Extent1].[Id] = @EntityKeyValue1
+2018-04-25 16:02:44,604 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:44,604 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- EntityKeyValue1: '1' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:44,604 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,605 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2018-04-25 16:02:44,605 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:44,605 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,606 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：Opened connection at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,606 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[PCount] AS [PCount], 
+    [Project1].[PScore] AS [PScore], 
+    [Project1].[ExamTime] AS [ExamTime], 
+    [Project1].[ZScore] AS [ZScore], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Title] AS [Title], 
+        [Extent1].[PCount] AS [PCount], 
+        [Extent1].[PScore] AS [PScore], 
+        [Extent1].[ExamTime] AS [ExamTime], 
+        [Extent1].[ZScore] AS [ZScore], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_Papers] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2018-04-25 16:02:44,606 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:44,606 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- p__linq__0: '8' (Type = Int32, IsNullable = false)
+
+2018-04-25 16:02:44,606 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Executing at 2018/4/25 16:02:44 +08:00
+
+2018-04-25 16:02:44,607 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2018-04-25 16:02:44,607 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：
+
+2018-04-25 16:02:44,607 [14] DEBUG Exam.Service.MyDbContext - EF执行SQL：Closed connection at 2018/4/25 16:02:44 +08:00
+

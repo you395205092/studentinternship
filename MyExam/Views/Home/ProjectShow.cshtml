@@ -1,0 +1,18 @@
+﻿@model ProjectDTO
+
+<style>
+    .xiamgmujies img { text-align:center}
+</style>
+<div style="background:url(/Public/Home/Images/banner.jpg) top center  no-repeat ; height:400px;">
+</div>
+
+
+<div class="xiamgmujies">
+    <h1 style="font-size:24px;font-weight:bold; text-align:center;">@Model.Title</h1>
+    <h2 style="text-align:center; font-size:16px;">@Model.enTitle</h2>
+    <div>
+       @Html.Raw(Model.Remark)
+    </div>
+</div>
+
+

@@ -1,0 +1,125 @@
+﻿@model ProjectDTO[]
+@{
+    ViewBag.Title = "添加岗位";
+}
+
+<article class="page-container">
+    <form class="form form-horizontal" id="formAdd">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>项目名称：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <div class="formControls col-xs-8 col-sm-9">
+                    <select name="ProjectId" id="ProjectId">
+                        @foreach (var item in Model)
+                        {
+                            <option value="@item.Id">@item.Title</option>
+                        }
+                    </select>
+
+                </div>
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>岗位：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="" placeholder="" id="Position" name="Position">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>地址：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="" placeholder="" id="Address" name="Address">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>经理：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="" placeholder="" id="Manager" name="Manager">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>时薪：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="" placeholder="" id="Wage" name="Wage">
+            </div>
+        </div>  
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>邮箱：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="email" class="input-text" value="" placeholder="" id="Email" name="Email">
+            </div>
+        </div>        
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>总量：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="number" class="input-text" value="" placeholder="" id="CountNum" name="CountNum">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>最低分：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="number" class="input-text" value="" placeholder="" id="Score" name="Score">
+            </div>
+        </div>
+
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                <input class="btn btn-primary radius" type="submit" id="btnSave" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+            </div>
+        </div>
+    </form>
+</article>
+@section FooterScript{
+
+    <script type="text/javascript" src="~/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+    <script type="text/javascript" src="~/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+    <script type="text/javascript" src="~/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+    <script type="text/javascript">
+$(function(){
+    var saveAjax = function () {
+        var formData = $("#formAdd").serializeArray();
+        $.ajax({
+            url: "/Admin/WorkPost/Add",
+            type: "post",
+            data: formData,
+            dataType: "json",
+            success: function (res) {
+                if (res.status == "ok") {
+                    parent.location.reload();//刷新父窗口
+                }
+                else {
+                    alert(res.errorMsg);
+                }
+            },
+            error: function () { alert("请求出错"); }
+        });
+    };
+
+    $("#formAdd").validate({
+		rules:{
+		    Name: {
+				required:true,
+				minlength:2,
+				maxlength:50
+		    },
+		    Description: {
+		        required: true,
+		        minlength: 2,
+		        maxlength: 255
+		    },
+		    Score: {
+		        range: [0, 100]
+		    }
+		    
+
+		},
+		onkeyup:false,
+		focusCleanup:true,
+		success:"valid",
+		submitHandler:function(form){
+		    saveAjax();
+		}
+	});
+});
+    </script>
+}
